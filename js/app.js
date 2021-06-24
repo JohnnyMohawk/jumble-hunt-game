@@ -1,6 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const wordsArr = ["PARTY","PARTYPANTS","PARTYHAT","PARTYSHOES","PARTYSOCKS","PARTYUNDIES","PARTYSHIRT","PARTYDOWN"]
 let lettersArr = []
+let guessArr = []
 let rndmNumIdx;
 let chosenWord;
 let scrambledWord;
@@ -10,7 +11,7 @@ const board = document.getElementById('board')
 const unscrambled = document.getElementById('assemble')
 const word = document.getElementById('theWord')
 /*----------------------------- Event Listeners -----------------------------*/
-board.addEventListener("click", clickCheck)
+board.addEventListener("click", handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -60,4 +61,14 @@ function fillWordTiles(){
 
 function clickCheck(){
     console.log(parseInt(event.target.id.split('').pop()))
+}
+
+function handleClick(){
+    index = parseInt(event.target.id.split('').pop())
+    guessArr.push(index)
+    console.log("Guess letters", guessArr)
+    lettersArr.splice(index, 1)
+    console.log(lettersArr)
+    // fillWordTiles()
+
 }
