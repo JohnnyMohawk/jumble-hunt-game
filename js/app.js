@@ -11,7 +11,7 @@ const board = document.getElementById('board')
 const unscrambled = document.getElementById('assemble')
 const word = document.getElementById('theWord')
 /*----------------------------- Event Listeners -----------------------------*/
-board.addEventListener("click", handleClick)
+board.addEventListener("click", resetTiles)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -59,16 +59,38 @@ function fillWordTiles(){
     })
 }
 
+function fillGuessTiles(){
+    guessArr.forEach((letter, index) => {
+        div2 = document.createElement('div')
+        div2.id="firstDiv" + index
+        div2.classname="scramLets"
+        div2.innerHTML=letter
+        unscrambled.appendChild(div2)
+    })
+}
+
 function clickCheck(){
     console.log(parseInt(event.target.id.split('').pop()))
 }
 
 function handleClick(){
     index = parseInt(event.target.id.split('').pop())
-    guessArr.push(index)
+    guessArr.push(lettersArr[index])
     console.log("Guess letters", guessArr)
     lettersArr.splice(index, 1)
     console.log(lettersArr)
-    // fillWordTiles()
+    fillWordTiles()
+    fillGuessTiles()
 
 }
+
+function dispScramLets(index){
+    
+}
+
+function resetTiles(){
+    board.innerHTML = ''
+    unscrambled.innerHTML = ''
+    handleClick()
+}
+
