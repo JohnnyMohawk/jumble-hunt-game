@@ -10,9 +10,17 @@ const board = document.getElementById('board')
 const unscrambled = document.getElementById('assemble')
 const word = document.getElementById('theWord')
 /*----------------------------- Event Listeners -----------------------------*/
-
+board.addEventListener("click", clickCheck)
 
 /*-------------------------------- Functions --------------------------------*/
+
+init()
+
+function init(){
+    rndmIdxGen()
+	scrambler()
+	fillWordTiles()
+}
 
 function rndmIdxGen(){
     rndmNumIdx = Math.floor(Math.random()*wordsArr.length)
@@ -50,3 +58,6 @@ function fillWordTiles(){
     })
 }
 
+function clickCheck(){
+    console.log(parseInt(event.target.id.split('').pop()))
+}
