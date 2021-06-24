@@ -40,3 +40,13 @@ function scrambler(){
 
 }
 
+function fillWordTiles(){
+    lettersArr.forEach((letter, index) => {
+        div1 = document.createElement('div')
+        div1.id="firstDiv" + index
+        div1.classname="scramLets"
+        div1.innerHTML=letter
+        board.appendChild(div1)
+    })
+}
+
