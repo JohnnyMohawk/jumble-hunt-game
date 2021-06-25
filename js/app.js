@@ -5,6 +5,11 @@ let guessArr = []
 let rndmNumIdx;
 let chosenWord;
 let scrambledWord;
+let level = 1
+let correct = 0
+let attempts = 0
+let score = 0
+
 
 /*------------------------ Cached Element References ------------------------*/
 const board = document.getElementById('board')
