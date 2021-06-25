@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    /* margin: 1.2rem 0; */
+    margin: 1.2rem 0;
     /* margin-bottom: auto; */
     font-size: 3rem;
     color: white;
@@ -47,10 +47,12 @@ h2 {
 }
 
 #assemble {
-    min-height: 17rem;
+    padding-top: 2rem;
+    min-height: 20rem;
 }
 
 #board {
+    min-height: 9rem;
     margin-top: auto;
 }
 
@@ -63,3 +65,8 @@ h2 {
     justify-content: center;
 
 }
+
+/* button {
+    position: fixed;
+    bottom: 30px;
+} */

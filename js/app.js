@@ -122,10 +122,13 @@ function restart(){
     score = 0
     unscrambled.innerHTML = ""
     word.innerHTML = ""
+    board.innerHTML = ""
     lettersArr = []
     guessArr = []
     rndmIdxGen()
+    console.log(lettersArr)
     scrambler()
+    console.log(lettersArr)
     fillWordTiles()
 }
 
