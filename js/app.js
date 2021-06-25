@@ -15,9 +15,16 @@ let score = 0
 const board = document.getElementById('board')
 const unscrambled = document.getElementById('assemble')
 const word = document.getElementById('theWord')
+const levelDisplay = document.getElementById("level")
+const scoreDisplay = document.getElementById("score")
+const attemptsDisplay = document.getElementById("attempts")
+const cheatsDisplay = document.getElementById("cheats")
+const restartBtn = document.getElementById("restartBtn")
+const cheatBtn = document.getElementById("cheatBtn")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
-
+// restartBtn.addEventListener("click", )
+cheatBtn.addEventListener("click", revealAns)
 /*-------------------------------- Functions --------------------------------*/
 
 init()
