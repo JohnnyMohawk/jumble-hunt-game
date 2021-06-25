@@ -70,3 +70,14 @@ h2 {
     position: fixed;
     bottom: 30px;
 } */
+
+#restartBtn{
+    position: fixed;
+    bottom: 3rem;
+    right: 6rem;
+}
+#cheatBtn{
+    position: fixed;
+    bottom: 3rem;
+    left: 6rem;
+}
