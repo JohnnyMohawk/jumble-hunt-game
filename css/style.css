@@ -15,7 +15,6 @@ body {
     height: 100vh;
     background-color: #39A2DB;
     font-family: sans-serif;
-    margin: 0;
     text-align:center;
     align-items: center;
     display: flex;
@@ -46,15 +45,16 @@ h2 {
     margin: 0 .4rem 1rem;
 }
 
+#gameBoardDisplay {
+    position: fixed;
+    bottom: 8rem;
+}
+
 #assemble {
     padding-top: 2rem;
     min-height: 20rem;
 }
 
-#board {
-    min-height: 9rem;
-    margin-top: auto;
-}
 
 #board,
 #assemble {
