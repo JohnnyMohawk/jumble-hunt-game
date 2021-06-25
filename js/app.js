@@ -122,6 +122,8 @@ function restart(){
     score = 0
     unscrambled.innerHTML = ""
     word.innerHTML = ""
+    lettersArr = []
+    guessArr = []
     rndmIdxGen()
     scrambler()
     fillWordTiles()
