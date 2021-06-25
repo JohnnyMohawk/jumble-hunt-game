@@ -39,16 +39,19 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
+
 }
 
 #gameStatusDisplay > p {
     margin: 0 .4rem 1rem;
 }
 
-#gameBoardDisplay {
+#gameBoardStatus {
+    /* min-height: 20rem; */
     position: fixed;
     bottom: 8rem;
 }
+
 
 #assemble {
     padding-top: 2rem;
