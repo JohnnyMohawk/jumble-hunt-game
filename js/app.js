@@ -104,6 +104,7 @@ function checkGuess(){
         let guessWord = guessArr.join('')
         if(guessWord === chosenWord){
             console.log("WINNER!!!")
+            
         }else{
             console.log("LOSER!!!")
         }
@@ -123,4 +124,6 @@ function restart(){
     scrambler()
     fillWordTiles()
 }
+
+
 
