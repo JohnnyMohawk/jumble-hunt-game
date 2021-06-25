@@ -23,7 +23,7 @@ const restartBtn = document.getElementById("restartBtn")
 const cheatBtn = document.getElementById("cheatBtn")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
-// restartBtn.addEventListener("click", )
+restartBtn.addEventListener("click", restart)
 cheatBtn.addEventListener("click", revealAns)
 /*-------------------------------- Functions --------------------------------*/
 
@@ -111,5 +111,16 @@ function checkGuess(){
 }
 
 function revealAns(){
-    document.getElementById('theWord').innerHTML=chosenWord
+    document.getElementById('theWord').innerHTML = chosenWord
 }
+
+function restart(){
+    level = 1
+    correct = 0
+    attempts = 0
+    score = 0
+    word.innerHTML = ""
+    scrambler()
+    fillWordTiles()
+}
+
