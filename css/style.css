@@ -24,7 +24,8 @@ h1 {
     color: white;
 }
 
-#board {
+#board,
+#assemble {
     display: flex;
     align-content: center;
     justify-content: center;
