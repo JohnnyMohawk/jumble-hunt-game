@@ -97,3 +97,7 @@ function checkGuess(){
         }
     }
 }
+
+function revealAns(){
+    document.getElementById('theWord').innerHTML=chosenWord
+}
