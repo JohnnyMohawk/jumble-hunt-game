@@ -46,12 +46,13 @@ h2 {
     margin: 0 .4rem 1rem;
 }
 
-#gameBoardStatus {
-    /* min-height: 20rem; */
+#gameBoardDisplay {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
     position: fixed;
     bottom: 8rem;
 }
-
 
 #assemble {
     padding-top: 2rem;
@@ -59,20 +60,32 @@ h2 {
 }
 
 
-#board,
 #assemble {
     font-size: 3rem;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
-/* button {
+#board {
+    font-size: 8rem;
+    line-height: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#theWord {
     position: fixed;
-    bottom: 30px;
-} */
+    bottom: 6rem;
+}
+
 
 #restartBtn{
     position: fixed;
