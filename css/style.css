@@ -13,7 +13,9 @@ html {
 
 body {
     height: 100vh;
-    background-color: #39A2DB;
+    background-image: url('/images/jumble-hunt-mobile-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: sans-serif;
     text-align:center;
     align-items: center;
@@ -21,20 +23,35 @@ body {
     flex-direction: column;
 }
 
+#gameHeader {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/jumble-hunt-mobile-cloud-header.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 h1 {
-    margin: 1.2rem 0;
-    /* margin-bottom: auto; */
-    font-size: 3rem;
+    margin: .2rem 0 0 0;
+    font-family: 'Lobster', cursive;
+    text-shadow:
+    -2px -2px 0 #5B5B5B,
+    2px 2px 0 #5B5B5B,
+    -2px -2px 0 #5B5B5B,
+    2px 2px 0 #5B5B5B;
+    font-size: 4rem;
     color: white;
     width: 100%;
 }
 
 h2 {
+    font-family: 'Viaoda Libre', cursive;
     font-size: 1.2rem;
 }
 
 #gameStatusDisplay {
-    font-size: .9rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
     margin-bottom: -10px;
     display: flex;
     align-content: center;
@@ -56,7 +73,7 @@ h2 {
     flex-direction: column;
     /* min-height: auto; */
     position: fixed;
-    bottom: 8rem;
+    bottom: 10rem;
 }
 
 /* #assemble {
@@ -96,10 +113,10 @@ h2 {
 #restartBtn{
     position: fixed;
     bottom: 3rem;
-    right: 6rem;
+    right: 2rem;
 }
 #cheatBtn{
     position: fixed;
     bottom: 3rem;
-    left: 6rem;
+    left: 2rem;
 }
