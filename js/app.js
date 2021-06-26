@@ -11,7 +11,7 @@ let rndmNumIdx;
 let chosenWord;
 let scrambledWord;
 let level = 1
-let correct = 0
+let correct = 1
 let attempts = 0
 let score = 0
 let cheats = 0
