@@ -1,5 +1,10 @@
 /*-------------------------------- Constants --------------------------------*/
-const wordsArr = ["PARTY","PARTYPANTS","PARTYHAT","PARTYSHOES","PARTYSOCKS","PARTYUNDIES","PARTYSHIRT","PARTYDOWN"]
+// const wordsArr = ["PARTY","PARTYPANTS","PARTYHAT","PARTYSHOES","PARTYSOCKS","PARTYUNDIES","PARTYSHIRT","PARTYDOWN"]
+const levelOneWords = ["FOUR"]
+const levelTwoWords = ["FIVES"]
+const levelThreeWords = ["SIXESZ"]
+const levelFourWords = ["SEVENSZ"]
+const levelFiveWords = ["EIGHTSZS"]
 let lettersArr = []
 let guessArr = []
 let rndmNumIdx;
@@ -30,18 +35,23 @@ cheatBtn.addEventListener("click", revealAns)
 init()
 
 function init(){
-    rndmIdxGen()
+    // rndmWordGen()
+    levelUp()
 	scrambler()
 	fillWordTiles()
 }
 
-function rndmIdxGen(){
-    rndmNumIdx = Math.floor(Math.random()*wordsArr.length)
+function rndmWordGen(lvl){
+    chosenWord = lvl[Math.floor(Math.random() * lvl.length + 1) - 1]
 }
 
+// function rndmWordGen(){
+//     chosenWord = level[Math.floor(Math.random() * level.length)]
+// }
+
 function scrambler(){
-    chosenWord = wordsArr[rndmNumIdx]
-    wordLength = chosenWord.length
+    // chosenWord = wordsArr[rndmNumIdx]
+    // wordLength = chosenWord.length
     lettersArr = chosenWord.split("")
     let curIdx = lettersArr.length
     let tempVal
@@ -101,17 +111,48 @@ function handleClick(){
 
 function checkGuess(){
     if(lettersArr.length === 0){
+        if(correct === 3){
+            level += 1
+            correct = 0
+        }
+        if(attempts === 3){
+            console.log("game over")
+            restart()
+        }
         let guessWord = guessArr.join('')
         if(guessWord === chosenWord){
-            console.log("WINNER!!!")
-
+            correct += 1
+            score += 1
+            attempts = 0
+            levelUp()
         }else{
             console.log("LOSER!!!")
+            score -= 1
+            attempts += 1
         }
+        console.log("correct: ", correct, "score: ", score)
+        // updateStats()
+    }
+}
+
+function levelUp(){
+    if(level === 1){
+        rndmWordGen(levelOneWords)
+    }else if(level === 2){
+        rndmWordGen(levelTwoWords)
+    }else if(level === 3){
+        rndmWordGen(levelThreeWords)
+    }else if(level === 4){
+        rndmWordGen(levelFourWords)
+    }else if(level === 5){
+        rndmWordGen(levelFiveWords)
+    }else{
+        console.log("you win the game")
     }
 }
 
 function revealAns(){
+    score = 0
     document.getElementById('theWord').innerHTML = chosenWord
 }
 
@@ -125,7 +166,7 @@ function restart(){
     board.innerHTML = ""
     lettersArr = []
     guessArr = []
-    rndmIdxGen()
+    levelUp()
     console.log(lettersArr)
     scrambler()
     console.log(lettersArr)
