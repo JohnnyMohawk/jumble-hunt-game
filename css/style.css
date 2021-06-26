@@ -46,28 +46,34 @@ h2 {
     margin: 0 .4rem 1rem;
 }
 
+#unscramDisplay {
+    position: fixed;
+    top: 4rem;
+}
+
 #gameBoardDisplay {
     display: flex;
     flex-direction: column;
-    min-height: auto;
+    /* min-height: auto; */
     position: fixed;
     bottom: 8rem;
 }
 
-#assemble {
+/* #assemble {
     padding-top: 2rem;
     min-height: 20rem;
-}
+} */
 
 
 #assemble {
-    font-size: 3rem;
+    font-size: 4rem;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-
+    padding-top: 2rem;
+    min-height: 20rem;
 }
 
 #board {
