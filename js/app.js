@@ -76,7 +76,7 @@ function fillWordTiles(){
     lettersArr.forEach((letter, index) => {
         div1 = document.createElement('div')
         div1.id="firstDiv" + index
-        div1.classname="scramLets"
+        div1.className="scramLets"
         div1.innerHTML=letter
         board.appendChild(div1)
     })
@@ -86,7 +86,7 @@ function fillGuessTiles(){
     guessArr.forEach((letter, index) => {
         div2 = document.createElement('div')
         div2.id="firstDiv" + index
-        div2.classname="scramLets"
+        div2.className="scramLets"
         div2.innerHTML=letter
         unscrambled.appendChild(div2)
     })
@@ -174,14 +174,16 @@ function restart(){
 }
 
 function reset(){
-    unscrambled.innerHTML = ""
-    word.innerHTML = ""
-    board.innerHTML = ""
+    // This is where the innerHTML used to be
     lettersArr = []
     guessArr = []
     levelUp()
     scrambler()
     fillWordTiles()
     updateStats()
+    // moving them here prevents double display, but now restart doesn't load new word
+    unscrambled.innerHTML = ""
+    word.innerHTML = ""
+    board.innerHTML = ""
 }
 
