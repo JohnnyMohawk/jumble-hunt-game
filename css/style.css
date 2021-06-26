@@ -64,11 +64,19 @@ h2 {
 }
 
 #unscramDisplay {
+    
+    /* margin-top: 20px; */
+    height: 100px;
     position: fixed;
-    top: 4rem;
+    top: 6rem;
 }
 
+/* #unscramDisplay > p {
+    margin;
+} */
+
 #gameBoardDisplay {
+    font-family: 'Big Shoulders Stencil Display', cursive;
     display: flex;
     flex-direction: column;
     /* min-height: auto; */
@@ -83,7 +91,8 @@ h2 {
 
 
 #assemble {
-    font-size: 4rem;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 5rem;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -91,6 +100,10 @@ h2 {
     flex-wrap: wrap;
     padding-top: 2rem;
     min-height: 20rem;
+}
+
+#assemble > div {
+    margin-left: .3rem;
 }
 
 #board {
@@ -101,7 +114,6 @@ h2 {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 #theWord {

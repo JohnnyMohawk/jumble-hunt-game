@@ -88,6 +88,11 @@ function fillGuessTiles(){
         div2.id="firstDiv" + index
         div2.className="scramLets"
         div2.innerHTML=letter
+        div2.style.textAlign = "center"
+        div2.style.backgroundImage = "url(images/square_cloud.png"
+        div2.style.backgroundSize = "100%"
+        div2.style.backgroundRepeat = "no-repeat"
+        div2.style.backgroundPosition = "center"
         unscrambled.appendChild(div2)
     })
 }
