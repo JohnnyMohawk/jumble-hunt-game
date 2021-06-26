@@ -14,6 +14,7 @@ let level = 1
 let correct = 0
 let attempts = 0
 let score = 0
+let cheats = 0
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -41,13 +42,13 @@ function init(){
 	fillWordTiles()
 }
 
-function rndmWordGen(lvl){
-    chosenWord = lvl[Math.floor(Math.random() * lvl.length + 1) - 1]
-}
-
-// function rndmWordGen(){
-//     chosenWord = level[Math.floor(Math.random() * level.length)]
+// function rndmWordGen(lvl){
+//     chosenWord = lvl[Math.floor(Math.random() * lvl.length + 1) - 1]
 // }
+
+function rndmWordGen(lvl){
+    chosenWord = lvl[Math.floor(Math.random() * lvl.length)]
+}
 
 function scrambler(){
     // chosenWord = wordsArr[rndmNumIdx]
@@ -91,19 +92,17 @@ function fillGuessTiles(){
     })
 }
 
-function clickCheck(){
-    console.log(parseInt(event.target.id.split('').pop()))
-}
+// function clickCheck(){
+//     console.log(parseInt(event.target.id.split('').pop()))
+// }
 
 function handleClick(){
     board.innerHTML = ''
     unscrambled.innerHTML = ''
     index = parseInt(event.target.id.split('').pop())
     guessArr.push(lettersArr[index])
-    // console.log("Guess letters", guessArr)
     lettersArr.splice(index, 1)
     checkGuess()
-    // console.log(lettersArr)
     fillWordTiles()
     fillGuessTiles()
 
@@ -124,15 +123,22 @@ function checkGuess(){
             correct += 1
             score += 1
             attempts = 0
-            levelUp()
+            reset()
+            console.log(lettersArr)
         }else{
             console.log("LOSER!!!")
             score -= 1
             attempts += 1
         }
-        console.log("correct: ", correct, "score: ", score)
-        // updateStats()
+        updateStats()
     }
+}
+
+function updateStats(){
+    scoreDisplay.innerHTML = score
+    levelDisplay.innerHTML = level
+    attemptsDisplay.innerHTML = attempts
+    cheatsDisplay.innerHTML = cheats
 }
 
 function levelUp(){
@@ -153,6 +159,8 @@ function levelUp(){
 
 function revealAns(){
     score = 0
+    cheats += 1
+    updateStats()
     document.getElementById('theWord').innerHTML = chosenWord
 }
 
@@ -161,17 +169,19 @@ function restart(){
     correct = 0
     attempts = 0
     score = 0
+    cheats = 0
+    reset()
+}
+
+function reset(){
     unscrambled.innerHTML = ""
     word.innerHTML = ""
     board.innerHTML = ""
     lettersArr = []
     guessArr = []
     levelUp()
-    console.log(lettersArr)
     scrambler()
-    console.log(lettersArr)
     fillWordTiles()
+    updateStats()
 }
-
-
 
