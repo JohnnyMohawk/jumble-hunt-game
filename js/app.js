@@ -127,8 +127,9 @@ function checkGuess(){
             console.log(lettersArr)
         }else{
             console.log("LOSER!!!")
-            score -= 1
+            if(score > 0) score -= 1
             attempts += 1
+            reset()
         }
         updateStats()
     }
@@ -165,12 +166,13 @@ function revealAns(){
 }
 
 function restart(){
-    level = 1
-    correct = 0
-    attempts = 0
-    score = 0
-    cheats = 0
-    reset()
+    window.location.reload()
+    // level = 1
+    // correct = 0
+    // attempts = 0
+    // score = 0
+    // cheats = 0
+    // reset()
 }
 
 function reset(){
