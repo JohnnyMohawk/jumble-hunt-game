@@ -248,7 +248,9 @@ function setMessage(){
 
 function displayResults(){
     setMessage()
-    winLoseDisplay.textContent = chosenMsg
+    winLoseDisplay.innerHTML =
+    `<p>${chosenMsg}</p>
+    <button id="fuck>shit</button>`
     winLoseDisplay.style.backgroundImage = "url(images/target.png"
     winLoseDisplay.style.backgroundSize = "100%"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
