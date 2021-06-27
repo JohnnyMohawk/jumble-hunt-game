@@ -248,14 +248,12 @@ function setMessage(){
 
 function displayResults(){
     setMessage()
-    winLoseDisplay.innerText = chosenMsg
+    winLoseDisplay.textContent = chosenMsg
     winLoseDisplay.style.backgroundImage = "url(images/target.png"
     winLoseDisplay.style.backgroundSize = "100%"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
     winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
-    nxtWrdBtn = winLoseDisplay.createElement("button")
-    
 }
 
 function restart(){
