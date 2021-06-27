@@ -64,34 +64,12 @@ h2 {
 }
 
 #unscramDisplay {
-    
-    /* margin-top: 20px; */
     height: 100px;
     position: fixed;
     top: 6rem;
 }
 
-/* #unscramDisplay > p {
-    margin;
-} */
-
-#gameBoardDisplay {
-    font-family: 'Roboto Slab', serif;
-    display: flex;
-    flex-direction: column;
-    /* min-height: auto; */
-    position: fixed;
-    bottom: 10rem;
-}
-
-/* #assemble {
-    padding-top: 2rem;
-    min-height: 20rem;
-} */
-
-
 #assemble {
-
     color: #5092be;
     text-shadow:
     -2px -2px 0 #eeeeec,
@@ -109,9 +87,19 @@ h2 {
     min-height: 20rem;
 }
 
-/* #assemble > div {
-    margin-left: .3rem;
-} */
+#winLoseMsg {
+    position: fixed;
+    bottom: 19rem;
+}
+
+#gameBoardDisplay {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    /* min-height: auto; */
+    position: fixed;
+    bottom: 10rem;
+}
 
 #board {
     color: #7b9d3d;
