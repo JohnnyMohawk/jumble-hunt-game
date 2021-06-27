@@ -40,7 +40,7 @@ h1 {
     -2px -2px 0 #5B5B5B,
     2px 2px 0 #5B5B5B;
     font-size: 4rem;
-    color: white;
+    color: #5092be;
     width: 100%;
 }
 
@@ -76,7 +76,7 @@ h2 {
 } */
 
 #gameBoardDisplay {
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Roboto Slab', serif;
     display: flex;
     flex-direction: column;
     /* min-height: auto; */
@@ -91,6 +91,13 @@ h2 {
 
 
 #assemble {
+
+    color: #5092be;
+    text-shadow:
+    -2px -2px 0 #eeeeec,
+    2px 2px 0 #eeeeec,
+    -2px -2px 0 #eeeeec,
+    2px 2px 0 #eeeeec;
     font-family: 'Kirang Haerang', cursive;
     font-size: 4rem;
     display: flex;
@@ -107,6 +114,12 @@ h2 {
 } */
 
 #board {
+    color: #7b9d3d;
+    text-shadow:
+    -2px -2px 0 black,
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px 2px 0 black;
     font-size: 5rem;
     line-height: 7rem;
     display: flex;
