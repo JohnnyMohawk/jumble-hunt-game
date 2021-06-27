@@ -201,12 +201,36 @@ function setMessage(){
     }
 }
 
+// function displayResults(){
+//     setMessage()
+//     winLoseDisplay.innerHTML =
+//     `<div id="msgAndBtn">
+//         ${chosenMsg}
+//         <button id="nxtWrdBtn" onclick="reset()">Continue to Next Word?</button>
+//     </div>`
+//     winLoseDisplay.style.backgroundImage = "url(images/target.png"
+//     winLoseDisplay.style.backgroundSize = "auto"
+//     winLoseDisplay.style.backgroundRepeat = "no-repeat"
+//     winLoseDisplay.style.backgroundPosition = "center"
+//     winLoseDisplay.style.visibility = "visible"
+// }
+
+
 function displayResults(){
+    let btnFunc;
+    let btnMsg;
     setMessage()
+    if(msgType === "game-over" || msgType === "win-game"){
+        btnFunc = "restart()"
+        btnMsg = "New Game"
+    }else if(msgType === "correct" || msgType === "wrong"){
+        btnFunc = "reset()"
+        btnMsg = "Continue to Next Word?"
+    }
     winLoseDisplay.innerHTML =
     `<div id="msgAndBtn">
         ${chosenMsg}
-        <button id="nxtWrdBtn" onclick="reset()">Continue to Next Word?</button>
+        <button id="nxtWrdBtn" onclick=${btnFunc}>${btnMsg}</button>
     </div>`
     winLoseDisplay.style.backgroundImage = "url(images/target.png"
     winLoseDisplay.style.backgroundSize = "auto"
@@ -214,6 +238,7 @@ function displayResults(){
     winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
 }
+
 
 function restart(){
     window.location.reload()
