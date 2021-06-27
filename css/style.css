@@ -65,7 +65,7 @@ h2 {
 }
 
 #unscramDisplay {
-    height: 100px;
+    /* height: 100px; */
     position: fixed;
     top: 6rem;
 }
@@ -89,9 +89,13 @@ h2 {
 }
 
 #winLoseMsg {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
     visibility: hidden;
     position: fixed;
-    bottom: 22rem;
+    bottom: 20rem;
+    min-height: 11rem;
+    padding-top: 3.5rem;
 }
 
 #gameBoardDisplay {
