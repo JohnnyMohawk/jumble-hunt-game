@@ -125,46 +125,6 @@ function handleClick(){
     fillWordTiles()
 }
 
-// function checkGuess(){
-//     if(lettersArr.length === 0){
-//         if(correct === 3){
-//             level += 1
-//             correct = 0
-//             click = 0
-//         }
-//         if(attempts === 3){
-//             msgType = "game-over"
-//             console.log("game over")
-//             winLoseDisplay.style.visibility = "visible"
-//             restart()
-//         }
-//         let guessWord = guessArr.join('')
-//         if(guessWord === chosenWord){
-//             correct += 1
-//             score += 1
-//             attempts = 0
-//             click = 0
-//             msgType = "correct"
-//             winLoseDisplay.style.backgroundImage = "url(images/target.png"
-//             winLoseDisplay.style.backgroundSize = "100%"
-//             winLoseDisplay.style.backgroundRepeat = "no-repeat"
-//             winLoseDisplay.style.backgroundPosition = "center"
-//             winLoseDisplay.style.visibility = "visible"
-//             reset()
-//         }else{
-//             console.log("LOSER!!!")
-//             msgType = "wrong"
-//             winLoseDisplay.style.visibility = "visible"
-//             if(score > 0) score -= 1
-//             attempts += 1
-//             click = 0
-//             reset()
-//         }
-//         updateStats()
-//     }   
-// }
-
-
 function checkGuess(){
     if(lettersArr.length === 0){
         if(correct === 3){
@@ -175,8 +135,6 @@ function checkGuess(){
         if(attempts === 3){
             msgType = "game-over"
             console.log("game over")
-            // winLoseDisplay.style.visibility = "visible"
-            // restart()
             displayResults()
         }
         let guessWord = guessArr.join('')
@@ -187,21 +145,17 @@ function checkGuess(){
             click = 0
             msgType = "correct"
             displayResults()
-            // reset()
         }else{
             console.log("LOSER!!!")
             msgType = "wrong"
-            // winLoseDisplay.style.visibility = "visible"
             if(score > 0) score -= 1
             attempts += 1
             click = 0
-            // reset()
             displayResults()
         }
         updateStats()
     }   
 }
-
 
 function updateStats(){
     scoreDisplay.innerHTML = score
@@ -225,7 +179,6 @@ function levelUp(){
         msgType = "win-game"
         console.log("you win the game")
         displayResults()
-        // winLoseDisplay.style.visibility = "visible"
     }
 }
 
@@ -264,32 +217,17 @@ function displayResults(){
 
 function restart(){
     window.location.reload()
-    // level = 1
-    // correct = 0
-    // attempts = 0
-    // score = 0
-    // cheats = 0
-    // reset()
 }
 
 function reset(){
-    // This is where the innerHTML used to be
-    // winLoseDisplay.style.visibility = "hidden"
-    // lettersArr = []
     winLoseDisplay.style.visibility = "hidden"
     guessArr = []
-
-    // updateStats()
-    // moving them here prevents double display, but now restart doesn't load new word
     unscrambled.innerHTML = ""
     word.innerHTML = ""
     board.innerHTML = ""
     levelUp()
     scrambler()
     fillWordTiles()
-    // setTimeout(function(){
-    //     testVisible()
-    // }, 2000)
 }
 
 function crosshairBoom(){
@@ -301,6 +239,3 @@ function crosshairBoom(){
     },100)
 }
 
-function testVisible(){
-    winLoseDisplay.style.visibility = "hidden"
-}
