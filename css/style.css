@@ -21,6 +21,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    cursor: url('../images/crosshair.png'), auto;
 }
 
 #gameHeader {
@@ -88,8 +89,9 @@ h2 {
 }
 
 #winLoseMsg {
+    visibility: hidden;
     position: fixed;
-    bottom: 19rem;
+    bottom: 22rem;
 }
 
 #gameBoardDisplay {
@@ -118,8 +120,16 @@ h2 {
 }
 
 #theWord {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: #7b9d3d;
+    text-shadow:
+    -2px -2px 0 black,
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px 2px 0 black;
     position: fixed;
-    bottom: 6rem;
+    bottom: 2.5rem;
 }
 
 

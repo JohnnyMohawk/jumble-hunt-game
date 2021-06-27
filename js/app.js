@@ -15,6 +15,7 @@ let correct = 1
 let attempts = 0
 let score = 0
 let cheats = 0
+let click = 0
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -27,6 +28,9 @@ const attemptsDisplay = document.getElementById("attempts")
 const cheatsDisplay = document.getElementById("cheats")
 const restartBtn = document.getElementById("restartBtn")
 const cheatBtn = document.getElementById("cheatBtn")
+const winLoseDisplay = document.getElementById("winLoseMsg")
+const gunshot = new Audio("../audio/gunshot.wav")
+const boo = new Audio("../audio/boo.wav")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
@@ -36,23 +40,16 @@ cheatBtn.addEventListener("click", revealAns)
 init()
 
 function init(){
-    // rndmWordGen()
     levelUp()
 	scrambler()
 	fillWordTiles()
 }
-
-// function rndmWordGen(lvl){
-//     chosenWord = lvl[Math.floor(Math.random() * lvl.length + 1) - 1]
-// }
 
 function rndmWordGen(lvl){
     chosenWord = lvl[Math.floor(Math.random() * lvl.length)]
 }
 
 function scrambler(){
-    // chosenWord = wordsArr[rndmNumIdx]
-    // wordLength = chosenWord.length
     lettersArr = chosenWord.split("")
     let curIdx = lettersArr.length
     let tempVal
@@ -67,9 +64,6 @@ function scrambler(){
         lettersArr[rndmIdx] = tempVal
     }
     scrambledWord = lettersArr.join("")
-    console.log(lettersArr)
-    console.log(scrambledWord)
-
 }
 
 function fillWordTiles(){
@@ -85,6 +79,7 @@ function fillWordTiles(){
         div1.style.backgroundRepeat = "no-repeat"
         div1.style.backgroundPosition = "center"
         board.appendChild(div1)
+        if(click === 0) div1.className = "animate__animated animate__backInRight"
     })
 }
 
@@ -101,23 +96,21 @@ function fillGuessTiles(){
         div2.style.backgroundRepeat = "no-repeat"
         div2.style.backgroundPosition = "center"
         unscrambled.appendChild(div2)
+        div2.className = "animate__animated animate__rotateIn"
     })
 }
 
-// function clickCheck(){
-//     console.log(parseInt(event.target.id.split('').pop()))
-// }
-
 function handleClick(){
+    click += 1
     board.innerHTML = ''
     unscrambled.innerHTML = ''
     index = parseInt(event.target.id.split('').pop())
     guessArr.push(lettersArr[index])
     lettersArr.splice(index, 1)
+    crosshairBoom()
     checkGuess()
-    fillWordTiles()
     fillGuessTiles()
-
+    fillWordTiles()
 }
 
 function checkGuess(){
@@ -125,9 +118,11 @@ function checkGuess(){
         if(correct === 3){
             level += 1
             correct = 0
+            click = 0
         }
         if(attempts === 3){
             console.log("game over")
+            // winLoseDisplay.style.visibility = "visible"
             restart()
         }
         let guessWord = guessArr.join('')
@@ -135,16 +130,19 @@ function checkGuess(){
             correct += 1
             score += 1
             attempts = 0
+            click = 0
+            winLoseDisplay.style.visibility = "visible"
             reset()
-            console.log(lettersArr)
         }else{
             console.log("LOSER!!!")
+            winLoseDisplay.style.visibility = "visible"
             if(score > 0) score -= 1
             attempts += 1
+            click = 0
             reset()
         }
         updateStats()
-    }
+    }   
 }
 
 function updateStats(){
@@ -167,6 +165,7 @@ function levelUp(){
         rndmWordGen(levelFiveWords)
     }else{
         console.log("you win the game")
+        winLoseDisplay.style.visibility = "visible"
     }
 }
 
@@ -189,15 +188,32 @@ function restart(){
 
 function reset(){
     // This is where the innerHTML used to be
-    lettersArr = []
+    // winLoseDisplay.style.visibility = "hidden"
+    // lettersArr = []
+    // winLoseDisplay.style.visibility = "hidden"
     guessArr = []
     levelUp()
     scrambler()
-    fillWordTiles()
-    updateStats()
+    // fillWordTiles()
+    // updateStats()
     // moving them here prevents double display, but now restart doesn't load new word
     unscrambled.innerHTML = ""
     word.innerHTML = ""
     board.innerHTML = ""
+    // setTimeout(function(){
+    //     testVisible()
+    // }, 2000)
 }
 
+function crosshairBoom(){
+    // toggles between crosshair cursor and displays flashbang cursor for 1/10th of a second on click.
+    gunshot.play()
+    document.body.style.cursor="url('../images/explosion.png'), auto"
+    setTimeout(function(){
+        document.body.style.cursor="url('../images/crosshair.png'), auto"
+    },100)
+}
+
+function testVisible(){
+    winLoseDisplay.style.visibility = "hidden"
+}
