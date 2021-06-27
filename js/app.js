@@ -34,6 +34,7 @@ const attemptsDisplay = document.getElementById("attempts")
 const cheatsDisplay = document.getElementById("cheats")
 const restartBtn = document.getElementById("restartBtn")
 const cheatBtn = document.getElementById("cheatBtn")
+const nextWordBtn = document.getElementById("nxtWrdBtn")
 const winLoseDisplay = document.getElementById("winLoseMsg")
 const gunshot = new Audio("../audio/gunshot.wav")
 const boo = new Audio("../audio/boo.wav")
@@ -41,6 +42,7 @@ const boo = new Audio("../audio/boo.wav")
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
 cheatBtn.addEventListener("click", revealAns)
+// nextWordBtn.addEventListener("click", reset)
 /*-------------------------------- Functions --------------------------------*/
 
 init()
@@ -251,9 +253,8 @@ function displayResults(){
     winLoseDisplay.innerHTML =
     `<div id="msgAndBtn">
         ${chosenMsg}
-        <button id="nxtWrdBtn">Continue to Next Word?</button>
+        <button id="nxtWrdBtn" onclick="reset()">Continue to Next Word?</button>
     </div>`
-    
     winLoseDisplay.style.backgroundImage = "url(images/target.png"
     winLoseDisplay.style.backgroundSize = "auto"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
@@ -275,16 +276,17 @@ function reset(){
     // This is where the innerHTML used to be
     // winLoseDisplay.style.visibility = "hidden"
     // lettersArr = []
-    // winLoseDisplay.style.visibility = "hidden"
+    winLoseDisplay.style.visibility = "hidden"
     guessArr = []
-    levelUp()
-    scrambler()
-    // fillWordTiles()
+
     // updateStats()
     // moving them here prevents double display, but now restart doesn't load new word
     unscrambled.innerHTML = ""
     word.innerHTML = ""
     board.innerHTML = ""
+    levelUp()
+    scrambler()
+    fillWordTiles()
     // setTimeout(function(){
     //     testVisible()
     // }, 2000)
