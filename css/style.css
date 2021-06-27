@@ -92,7 +92,7 @@ h2 {
 
 #assemble {
     font-family: 'Kirang Haerang', cursive;
-    font-size: 5rem;
+    font-size: 4rem;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -102,12 +102,12 @@ h2 {
     min-height: 20rem;
 }
 
-#assemble > div {
+/* #assemble > div {
     margin-left: .3rem;
-}
+} */
 
 #board {
-    font-size: 8rem;
+    font-size: 5rem;
     line-height: 7rem;
     display: flex;
     flex-direction: row;

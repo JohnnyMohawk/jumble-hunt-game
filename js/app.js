@@ -78,6 +78,12 @@ function fillWordTiles(){
         div1.id="firstDiv" + index
         div1.className="scramLets"
         div1.innerHTML=letter
+        div1.setAttribute("style", "width:90px")
+        div1.style.textAlign = "center"
+        div1.style.backgroundImage = "url(images/target.png"
+        div1.style.backgroundSize = "100%"
+        div1.style.backgroundRepeat = "no-repeat"
+        div1.style.backgroundPosition = "center"
         board.appendChild(div1)
     })
 }
@@ -88,6 +94,7 @@ function fillGuessTiles(){
         div2.id="firstDiv" + index
         div2.className="scramLets"
         div2.innerHTML=letter
+        div2.setAttribute("style", "width:50px")
         div2.style.textAlign = "center"
         div2.style.backgroundImage = "url(images/square_cloud.png"
         div2.style.backgroundSize = "100%"
