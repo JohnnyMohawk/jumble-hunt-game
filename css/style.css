@@ -95,7 +95,24 @@ h2 {
     position: fixed;
     bottom: 20rem;
     min-height: 11rem;
+    width: 90%;
     padding-top: 3.5rem;
+}
+
+#msgAndBtn {
+    display: flex;
+    flex-direction: column;
+}
+
+#nxtWrdBtn {
+    color: yellow;
+    text-shadow:
+    -2px -2px 0 black,
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px 2px 0 black;
+    background: transparent;
+    border: none;
 }
 
 #gameBoardDisplay {

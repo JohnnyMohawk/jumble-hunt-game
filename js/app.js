@@ -249,10 +249,13 @@ function setMessage(){
 function displayResults(){
     setMessage()
     winLoseDisplay.innerHTML =
-    `<p>${chosenMsg}</p>
-    <button id="fuck>shit</button>`
+    `<div id="msgAndBtn">
+        ${chosenMsg}
+        <button id="nxtWrdBtn">Continue to Next Word?</button>
+    </div>`
+    
     winLoseDisplay.style.backgroundImage = "url(images/target.png"
-    winLoseDisplay.style.backgroundSize = "100%"
+    winLoseDisplay.style.backgroundSize = "auto"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
     winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
