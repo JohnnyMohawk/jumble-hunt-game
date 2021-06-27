@@ -5,10 +5,15 @@ const levelTwoWords = ["FIVES"]
 const levelThreeWords = ["SIXESZ"]
 const levelFourWords = ["SEVENSZ"]
 const levelFiveWords = ["EIGHTSZS"]
+const gameOverMsgArr = ["Game Over"]
+const winGameMsgArr = ["You Win"]
+const correctMsgArr = ["That is correct"]
+const wrongMsgArr = ["Wrong"]
 let lettersArr = []
 let guessArr = []
 let rndmNumIdx;
 let chosenWord;
+let chosenMsg;
 let scrambledWord;
 let msgType;
 let level = 1
@@ -48,6 +53,10 @@ function init(){
 
 function rndmWordGen(lvl){
     chosenWord = lvl[Math.floor(Math.random() * lvl.length)]
+}
+
+function rndmMsgGen(msg){
+    chosenMsg = msg[Math.floor(Math.random() * msg.length)]
 }
 
 function scrambler(){
@@ -114,6 +123,46 @@ function handleClick(){
     fillWordTiles()
 }
 
+// function checkGuess(){
+//     if(lettersArr.length === 0){
+//         if(correct === 3){
+//             level += 1
+//             correct = 0
+//             click = 0
+//         }
+//         if(attempts === 3){
+//             msgType = "game-over"
+//             console.log("game over")
+//             winLoseDisplay.style.visibility = "visible"
+//             restart()
+//         }
+//         let guessWord = guessArr.join('')
+//         if(guessWord === chosenWord){
+//             correct += 1
+//             score += 1
+//             attempts = 0
+//             click = 0
+//             msgType = "correct"
+//             winLoseDisplay.style.backgroundImage = "url(images/target.png"
+//             winLoseDisplay.style.backgroundSize = "100%"
+//             winLoseDisplay.style.backgroundRepeat = "no-repeat"
+//             winLoseDisplay.style.backgroundPosition = "center"
+//             winLoseDisplay.style.visibility = "visible"
+//             reset()
+//         }else{
+//             console.log("LOSER!!!")
+//             msgType = "wrong"
+//             winLoseDisplay.style.visibility = "visible"
+//             if(score > 0) score -= 1
+//             attempts += 1
+//             click = 0
+//             reset()
+//         }
+//         updateStats()
+//     }   
+// }
+
+
 function checkGuess(){
     if(lettersArr.length === 0){
         if(correct === 3){
@@ -124,8 +173,9 @@ function checkGuess(){
         if(attempts === 3){
             msgType = "game-over"
             console.log("game over")
-            winLoseDisplay.style.visibility = "visible"
-            restart()
+            // winLoseDisplay.style.visibility = "visible"
+            // restart()
+            displayResults()
         }
         let guessWord = guessArr.join('')
         if(guessWord === chosenWord){
@@ -134,24 +184,22 @@ function checkGuess(){
             attempts = 0
             click = 0
             msgType = "correct"
-            winLoseDisplay.style.backgroundImage = "url(images/target.png"
-            winLoseDisplay.style.backgroundSize = "100%"
-            winLoseDisplay.style.backgroundRepeat = "no-repeat"
-            winLoseDisplay.style.backgroundPosition = "center"
-            winLoseDisplay.style.visibility = "visible"
-            reset()
+            displayResults()
+            // reset()
         }else{
             console.log("LOSER!!!")
             msgType = "wrong"
-            winLoseDisplay.style.visibility = "visible"
+            // winLoseDisplay.style.visibility = "visible"
             if(score > 0) score -= 1
             attempts += 1
             click = 0
-            reset()
+            // reset()
+            displayResults()
         }
         updateStats()
     }   
 }
+
 
 function updateStats(){
     scoreDisplay.innerHTML = score
@@ -172,7 +220,9 @@ function levelUp(){
     }else if(level === 5){
         rndmWordGen(levelFiveWords)
     }else{
+        msgType = "win-game"
         console.log("you win the game")
+        displayResults()
         // winLoseDisplay.style.visibility = "visible"
     }
 }
@@ -184,7 +234,25 @@ function revealAns(){
     document.getElementById('theWord').innerHTML = chosenWord
 }
 
+function setMessage(){
+    if(msgType === "game-over"){
+        rndmMsgGen(gameOverMsgArr)
+    }else if(msgType === "win-game"){
+        rndmMsgGen(winGameMsgArr)
+    }else if(msgType === "correct"){
+        rndmMsgGen(correctMsgArr)
+    }else if(msgType === "wrong"){
+        rndmMsgGen(wrongMsgArr)
+    }
+}
+
 function displayResults(){
+    setMessage()
+    winLoseDisplay.innerText = chosenMsg
+    winLoseDisplay.style.backgroundImage = "url(images/target.png"
+    winLoseDisplay.style.backgroundSize = "100%"
+    winLoseDisplay.style.backgroundRepeat = "no-repeat"
+    winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
 }
 
