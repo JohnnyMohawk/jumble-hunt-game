@@ -10,6 +10,7 @@ let guessArr = []
 let rndmNumIdx;
 let chosenWord;
 let scrambledWord;
+let msgType;
 let level = 1
 let correct = 1
 let attempts = 0
@@ -74,7 +75,7 @@ function fillWordTiles(){
         div1.innerHTML=letter
         div1.setAttribute("style", "width:90px")
         div1.style.textAlign = "center"
-        div1.style.backgroundImage = "url(images/target.png"
+        div1.style.backgroundImage = "url(images/target.png)"
         div1.style.backgroundSize = "100%"
         div1.style.backgroundRepeat = "no-repeat"
         div1.style.backgroundPosition = "center"
@@ -91,7 +92,7 @@ function fillGuessTiles(){
         div2.innerHTML=letter
         div2.setAttribute("style", "width:50px")
         div2.style.textAlign = "center"
-        div2.style.backgroundImage = "url(images/square_cloud.png"
+        div2.style.backgroundImage = "url(images/square_cloud.png)"
         div2.style.backgroundSize = "100%"
         div2.style.backgroundRepeat = "no-repeat"
         div2.style.backgroundPosition = "center"
@@ -121,8 +122,9 @@ function checkGuess(){
             click = 0
         }
         if(attempts === 3){
+            msgType = "game-over"
             console.log("game over")
-            // winLoseDisplay.style.visibility = "visible"
+            winLoseDisplay.style.visibility = "visible"
             restart()
         }
         let guessWord = guessArr.join('')
@@ -131,10 +133,16 @@ function checkGuess(){
             score += 1
             attempts = 0
             click = 0
+            msgType = "correct"
+            winLoseDisplay.style.backgroundImage = "url(images/target.png"
+            winLoseDisplay.style.backgroundSize = "100%"
+            winLoseDisplay.style.backgroundRepeat = "no-repeat"
+            winLoseDisplay.style.backgroundPosition = "center"
             winLoseDisplay.style.visibility = "visible"
             reset()
         }else{
             console.log("LOSER!!!")
+            msgType = "wrong"
             winLoseDisplay.style.visibility = "visible"
             if(score > 0) score -= 1
             attempts += 1
@@ -165,7 +173,7 @@ function levelUp(){
         rndmWordGen(levelFiveWords)
     }else{
         console.log("you win the game")
-        winLoseDisplay.style.visibility = "visible"
+        // winLoseDisplay.style.visibility = "visible"
     }
 }
 
@@ -174,6 +182,10 @@ function revealAns(){
     cheats += 1
     updateStats()
     document.getElementById('theWord').innerHTML = chosenWord
+}
+
+function displayResults(){
+    winLoseDisplay.style.visibility = "visible"
 }
 
 function restart(){
