@@ -24,12 +24,20 @@ body {
     cursor: url('../images/crosshair.png'), auto;
 }
 
+body.dark {
+    background-image: url('/images/jumble-hunt-mobile-bg-darkmode.png');
+}
+
 #gameHeader {
     width: 100%;
     height: 100%;
     background-image: url('/images/jumble-hunt-mobile-cloud-header.png');
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+#gameHeader.dark {
+    background-image: url('/images/jumble-hunt-mobile-moon-header.png');
 }
 
 h1 {
@@ -162,7 +170,7 @@ h2 {
     background-image: url('/images/restart.png');
     background-size: cover;
     position: fixed;
-    bottom: 3rem;
+    bottom: 4rem;
     right: 2rem;
     height: 55px;
     width: 55px;
@@ -175,10 +183,27 @@ h2 {
     background-image: url('/images/no-symbol.png');
     background-size: cover;
     position: fixed;
-    bottom: 3rem;
+    bottom: 4rem;
     left: 2rem;
     height: 55px;
     width: 55px;
+}
+
+#light-dark-button {
+    background-image: url('/images/explosion.png');
+    background-size: cover;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+}
+
+#light-dark-button::after {
+    border: none;
+    color: black;
+    content: "STEALTH";
 }
 
 
