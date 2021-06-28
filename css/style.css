@@ -26,6 +26,7 @@ body {
 
 body.dark {
     background-image: url('/images/jumble-hunt-mobile-bg-darkmode.png');
+
 }
 
 #gameHeader {
@@ -194,7 +195,7 @@ h2 {
     background-size: cover;
     position: fixed;
     bottom: 1rem;
-    right: 2rem;
+    right: 1.8rem;
     border: none;
     font-family: 'Bebas Neue', cursive;
     font-size: 1rem;
