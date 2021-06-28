@@ -42,7 +42,6 @@ const boo = new Audio("../audio/boo.wav")
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
 cheatBtn.addEventListener("click", revealAns)
-// nextWordBtn.addEventListener("click", reset)
 /*-------------------------------- Functions --------------------------------*/
 
 init()
@@ -147,7 +146,6 @@ function checkGuess(){
             updateStats()
             displayResults()
         }
-        
     }   
 }
 
@@ -238,7 +236,7 @@ function reset(){
 }
 
 function crosshairBoom(){
-    // toggles between crosshair cursor and displays flashbang cursor for 1/10th of a second on click.
+    // toggles between crosshair cursor and displays flashbang cursor for 1/10th of a second on click while playing gunshot sound.
     gunshot.play()
     document.body.style.cursor="url('../images/explosion.png'), auto"
     setTimeout(function(){
