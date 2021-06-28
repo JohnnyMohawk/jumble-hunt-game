@@ -125,43 +125,6 @@ function handleClick(){
     fillWordTiles()
 }
 
-// function checkGuess(){
-//     if(lettersArr.length === 0){
-//         if(correct === 3){
-//             level += 1
-//             correct = 0
-//             click = 0
-//         }
-//         if(attempts === 3){
-//             msgType = "game-over"
-//             console.log("game over")
-//             console.log(msgType)
-//             displayResults()
-//         }
-//         let guessWord = guessArr.join('')
-//         if(guessWord === chosenWord){
-//             correct += 1
-//             score += 1
-//             attempts = 0
-//             click = 0
-//             msgType = "correct"
-//             displayResults()
-//         }else{
-//             console.log("LOSER!!!")
-//             msgType = "wrong"
-//             if(score > 0) score -= 1
-//             attempts += 1
-//             click = 0
-//             displayResults()
-//         }
-//         updateStats()
-//     }   
-// }
-
-
-
-
-
 function checkGuess(){
     if(lettersArr.length === 0){
         let guessWord = guessArr.join('')
@@ -241,21 +204,6 @@ function setMessage(){
         rndmMsgGen(wrongMsgArr)
     }
 }
-
-// function displayResults(){
-//     setMessage()
-//     winLoseDisplay.innerHTML =
-//     `<div id="msgAndBtn">
-//         ${chosenMsg}
-//         <button id="nxtWrdBtn" onclick="reset()">Continue to Next Word?</button>
-//     </div>`
-//     winLoseDisplay.style.backgroundImage = "url(images/target.png"
-//     winLoseDisplay.style.backgroundSize = "auto"
-//     winLoseDisplay.style.backgroundRepeat = "no-repeat"
-//     winLoseDisplay.style.backgroundPosition = "center"
-//     winLoseDisplay.style.visibility = "visible"
-// }
-
 
 function displayResults(){
     let btnFunc;
