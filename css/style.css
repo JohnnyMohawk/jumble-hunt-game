@@ -166,6 +166,6 @@ h2 {
     left: 2rem;
 }
 
-#fuck {
-    visibility: inherit;
+@media only screen and (min-width: 768px){
+    
 }
