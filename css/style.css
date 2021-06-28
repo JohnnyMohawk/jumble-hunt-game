@@ -154,7 +154,6 @@ h2 {
     bottom: 2.5rem;
 }
 
-
 #restartBtn{
     position: fixed;
     bottom: 3rem;
@@ -181,4 +180,26 @@ h2 {
         background-repeat: no-repeat;
         background-size: 100%;
     }
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: -18px;
+    }
+
+    #gameBoardDisplay {
+        position: fixed;
+        bottom: 14rem;
+    }
+
+    #winLoseMsg {
+        /* font-family: 'Lobster', cursive;
+        font-size: 2rem;
+        visibility: hidden; */
+        position: fixed;
+        bottom: 22rem;
+        /* min-height: 11rem;
+        width: 90%;
+        padding-top: 3.5rem; */
+    }
+
 }
