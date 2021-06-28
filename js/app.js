@@ -159,26 +159,31 @@ function handleClick(){
 // }
 
 
+
+
+
 function checkGuess(){
     if(lettersArr.length === 0){
+        let guessWord = guessArr.join('')
         if(correct === 3){
             level += 1
             correct = 0
             click = 0
         }
-        if(attempts === 3){
-            msgType = "game-over"
-            console.log("game over")
-            console.log(msgType)
-            displayResults()
-        }
-        let guessWord = guessArr.join('')
+        // if(attempts === 3){
+        //     msgType = "game-over"
+        //     console.log("game over")
+        //     console.log(msgType)
+        //     updateStats()
+        //     displayResults()
+        // }
         if(guessWord === chosenWord){
             correct += 1
             score += 1
             attempts = 0
             click = 0
             msgType = "correct"
+            updateStats()
             displayResults()
         }else{
             console.log("LOSER!!!")
@@ -186,9 +191,10 @@ function checkGuess(){
             if(score > 0) score -= 1
             attempts += 1
             click = 0
+            updateStats()
             displayResults()
         }
-        updateStats()
+        
     }   
 }
 
@@ -213,7 +219,7 @@ function levelUp(){
     }else{
         msgType = "win-game"
         console.log("you win the game")
-        displayResults()
+        // displayResults()
     }
 }
 
@@ -254,6 +260,16 @@ function setMessage(){
 function displayResults(){
     let btnFunc;
     let btnMsg;
+    if(attempts === 3){
+        msgType = "game-over"
+        // console.log("game over")
+        // console.log(msgType)
+        // updateStats()
+        // displayResults()
+    }
+    if(level === 6){
+        msgType = "win-game"
+    }
     setMessage()
     if(msgType === "game-over" || msgType === "win-game"){
         btnFunc = "restart()"
