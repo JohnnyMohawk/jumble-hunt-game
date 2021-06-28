@@ -66,8 +66,6 @@ function scrambler(){
     let curIdx = lettersArr.length
     let tempVal
     let rndmIdx
-    console.log("word length:", curIdx)
-    console.log("first:", lettersArr)
     while (0 !== curIdx) {
         rndmIdx = Math.floor(Math.random() * curIdx)
         curIdx -= 1
@@ -133,13 +131,6 @@ function checkGuess(){
             correct = 0
             click = 0
         }
-        // if(attempts === 3){
-        //     msgType = "game-over"
-        //     console.log("game over")
-        //     console.log(msgType)
-        //     updateStats()
-        //     displayResults()
-        // }
         if(guessWord === chosenWord){
             correct += 1
             score += 1
@@ -149,7 +140,6 @@ function checkGuess(){
             updateStats()
             displayResults()
         }else{
-            console.log("LOSER!!!")
             msgType = "wrong"
             if(score > 0) score -= 1
             attempts += 1
@@ -181,8 +171,6 @@ function levelUp(){
         rndmWordGen(levelFiveWords)
     }else{
         msgType = "win-game"
-        console.log("you win the game")
-        // displayResults()
     }
 }
 
@@ -210,10 +198,6 @@ function displayResults(){
     let btnMsg;
     if(attempts === 3){
         msgType = "game-over"
-        // console.log("game over")
-        // console.log(msgType)
-        // updateStats()
-        // displayResults()
     }
     if(level === 6){
         msgType = "win-game"
@@ -237,7 +221,6 @@ function displayResults(){
     winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
 }
-
 
 function restart(){
     window.location.reload()
