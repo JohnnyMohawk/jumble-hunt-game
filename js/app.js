@@ -1,5 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
 // const wordsArr = ["PARTY","PARTYPANTS","PARTYHAT","PARTYSHOES","PARTYSOCKS","PARTYUNDIES","PARTYSHIRT","PARTYDOWN"]
+const colorScheme = {
+    dark: "",
+    change: function () {
+        console.log(colorScheme.dark)
+        colorScheme.dark = colorScheme.dark ? "" : "dark"
+        document.querySelector("body").setAttribute("class", colorScheme.dark)
+        console.log(colorScheme.dark)
+    }
+}
 const levelOneWords = ["FOUR"]
 const levelTwoWords = ["FIVES"]
 const levelThreeWords = ["SIXESZ"]
@@ -10,7 +19,7 @@ const winGameMsgArr = ["You Win"]
 const correctMsgArr = ["That is correct"]
 const wrongMsgArr = ["Wrong"]
 let lettersArr = []
-let guessArr = []
+let guessArr = [] 
 let rndmNumIdx;
 let chosenWord;
 let chosenMsg;
@@ -43,7 +52,10 @@ const boo = new Audio("../audio/boo.wav")
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
 cheatBtn.addEventListener("click", revealAns)
+lightDarkBtn.addEventListener("click", colorScheme.change)
 /*-------------------------------- Functions --------------------------------*/
+
+checkUserColorSchemePreference()
 
 init()
 
@@ -245,3 +257,11 @@ function crosshairBoom(){
     },100)
 }
 
+function checkUserColorSchemePreference() {
+    if(
+        window.matchMedia("(prefers-color-scheme:dark)").matches &&
+        !colorScheme.dark
+    ){
+        colorScheme.change()
+    }
+}
