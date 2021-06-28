@@ -155,14 +155,30 @@ h2 {
 }
 
 #restartBtn{
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    background-color: Transparent;
+    border: none;
+    background-image: url('/images/restart.png');
+    background-size: cover;
     position: fixed;
     bottom: 3rem;
     right: 2rem;
+    height: 55px;
+    width: 55px;
+
 }
 #cheatBtn{
+    font-family: 'Bebas Neue', cursive;
+    background-color: Transparent;
+    border: none;
+    background-image: url('/images/no-symbol.png');
+    background-size: cover;
     position: fixed;
     bottom: 3rem;
     left: 2rem;
+    height: 55px;
+    width: 55px;
 }
 
 @media only screen and (min-width: 768px){
@@ -192,14 +208,8 @@ h2 {
     }
 
     #winLoseMsg {
-        /* font-family: 'Lobster', cursive;
-        font-size: 2rem;
-        visibility: hidden; */
         position: fixed;
         bottom: 22rem;
-        /* min-height: 11rem;
-        width: 90%;
-        padding-top: 3.5rem; */
     }
 
 }
