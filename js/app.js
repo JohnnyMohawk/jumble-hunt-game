@@ -7,6 +7,8 @@ const colorScheme = {
         colorScheme.dark = colorScheme.dark ? "" : "dark"
         document.querySelector("body").setAttribute("class", colorScheme.dark)
         document.getElementById("gameHeader").setAttribute("class", colorScheme.dark)
+        document.getElementById("title").setAttribute("class", colorScheme.dark)
+        document.getElementById("inGameText").setAttribute("class", colorScheme.dark)
         console.log(colorScheme.dark)
     }
 }
@@ -1106,35 +1108,6 @@ function setMessage(){
         rndmMsgGen(wrongMsgArr)
     }
 }
-
-// function displayResults(){
-//     let btnFunc;
-//     let btnMsg;
-//     if(attempts === 3){
-//         msgType = "game-over"
-//     }
-//     if(level === 6){
-//         msgType = "win-game"
-//     }
-//     setMessage()
-//     if(msgType === "game-over" || msgType === "win-game"){
-//         btnFunc = "restart()"
-//         btnMsg = "New Game"
-//     }else if(msgType === "correct" || msgType === "wrong"){
-//         btnFunc = "reset()"
-//         btnMsg = "Continue to Next Word?"
-//     }
-//     winLoseDisplay.innerHTML =
-//     `<div id="msgAndBtn">
-//         ${chosenMsg}
-//         <button id="nxtWrdBtn" onclick=${btnFunc}>${btnMsg}</button>
-//     </div>`
-//     winLoseDisplay.style.backgroundImage = "url(images/target.png"
-//     winLoseDisplay.style.backgroundSize = "auto"
-//     winLoseDisplay.style.backgroundRepeat = "no-repeat"
-//     winLoseDisplay.style.backgroundPosition = "center"
-//     winLoseDisplay.style.visibility = "visible"
-// }
 
 function displayResults(){
     let btnFunc;

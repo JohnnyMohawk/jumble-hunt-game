@@ -54,6 +54,14 @@ h1 {
     width: 100%;
 }
 
+#title.dark {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+#inGameText.dark {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
 h2 {
     font-family: 'Viaoda Libre', cursive;
     font-size: 1.2rem;
@@ -270,4 +278,11 @@ h2 {
         bottom: 22rem;
     }
 
+    #title.dark {
+        font-family: 'Big Shoulders Stencil Display', cursive;
+    }
+    
+    #inGameText.dark {
+        font-family: 'Big Shoulders Stencil Display', cursive;
+    }
 }
