@@ -105,13 +105,21 @@ h2 {
     position: fixed;
     bottom: 20rem;
     min-height: 11rem;
-    width: 90%;
+    
     padding-top: 3.5rem;
+
+
 }
 
 #msgAndBtn {
     display: flex;
     flex-direction: column;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 3.5rem;
+    width: 375px;
+    height: 175px;
 }
 
 #nxtWrdBtn {

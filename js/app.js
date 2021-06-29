@@ -922,7 +922,8 @@ let chosenWord;
 let chosenMsg;
 let scrambledWord;
 let msgType;
-let level = 1
+let msgBckgrndImg;
+let level = 5
 let correct = 1
 let attempts = 0
 let score = 0
@@ -1008,7 +1009,7 @@ function fillGuessTiles(){
         div2.id="firstDiv" + index
         div2.className="scramLets"
         div2.innerHTML=letter
-        div2.setAttribute("style", "width:50px")
+        div2.setAttribute("style", "width:46px")
         div2.style.textAlign = "center"
         div2.style.backgroundImage = "url(images/square_cloud.png)"
         div2.style.backgroundSize = "100%"
@@ -1046,10 +1047,12 @@ function checkGuess(){
             attempts = 0
             click = 0
             msgType = "correct"
+            msgBckgrndImg = "url('../images/green-check.png')"
             updateStats()
             displayResults()
         }else{
             msgType = "wrong"
+            msgBckgrndImg = "url('../images/red-x.png')"
             if(score > 0) score -= 1
             attempts += 1
             click = 0
@@ -1077,6 +1080,8 @@ function levelUp(){
         rndmWordGen(levelFourWords)
     }else if(level === 5){
         rndmWordGen(levelFiveWords)
+        // unscrambled.style.fontSize = "3rem";
+        // unscrambled.setAttribute("style", "width:40px")
     }else{
         msgType = "win-game"
     }
@@ -1101,29 +1106,70 @@ function setMessage(){
     }
 }
 
+// function displayResults(){
+//     let btnFunc;
+//     let btnMsg;
+//     if(attempts === 3){
+//         msgType = "game-over"
+//     }
+//     if(level === 6){
+//         msgType = "win-game"
+//     }
+//     setMessage()
+//     if(msgType === "game-over" || msgType === "win-game"){
+//         btnFunc = "restart()"
+//         btnMsg = "New Game"
+//     }else if(msgType === "correct" || msgType === "wrong"){
+//         btnFunc = "reset()"
+//         btnMsg = "Continue to Next Word?"
+//     }
+//     winLoseDisplay.innerHTML =
+//     `<div id="msgAndBtn">
+//         ${chosenMsg}
+//         <button id="nxtWrdBtn" onclick=${btnFunc}>${btnMsg}</button>
+//     </div>`
+//     winLoseDisplay.style.backgroundImage = "url(images/target.png"
+//     winLoseDisplay.style.backgroundSize = "auto"
+//     winLoseDisplay.style.backgroundRepeat = "no-repeat"
+//     winLoseDisplay.style.backgroundPosition = "center"
+//     winLoseDisplay.style.visibility = "visible"
+// }
+
 function displayResults(){
     let btnFunc;
     let btnMsg;
     if(attempts === 3){
         msgType = "game-over"
+        msgBckgrndImg = "url('../images/target.png')"
     }
     if(level === 6){
         msgType = "win-game"
+        msgBckgrndImg = "url('../images/neon-star.png')"
     }
     setMessage()
-    if(msgType === "game-over" || msgType === "win-game"){
+    if(msgType === "game-over"){
         btnFunc = "restart()"
         btnMsg = "New Game"
-    }else if(msgType === "correct" || msgType === "wrong"){
+
+    }else if(msgType === "win-game"){
+        btnFunc = "restart()"
+        btnMsg = "New Game"
+
+    }else if(msgType === "correct"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
+
+    }else if(msgType === "wrong"){
+        btnFunc = "reset()"
+        btnMsg = "Continue to Next Word?"
+
     }
     winLoseDisplay.innerHTML =
-    `<div id="msgAndBtn">
+    `<div id="msgAndBtn" style="background-image: ${msgBckgrndImg};">
         ${chosenMsg}
         <button id="nxtWrdBtn" onclick=${btnFunc}>${btnMsg}</button>
     </div>`
-    winLoseDisplay.style.backgroundImage = "url(images/target.png"
+    // winLoseDisplay.style.backgroundImage = "url(images/target.png)"
     winLoseDisplay.style.backgroundSize = "auto"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
     winLoseDisplay.style.backgroundPosition = "center"
