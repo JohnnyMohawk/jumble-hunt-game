@@ -13,7 +13,7 @@ html {
 
 body {
     height: 100vh;
-    background-image: url('/images/jumble-hunt-mobile-bg.png');
+    background-image: url('/images/jumble-hunt-mobile-bg3.png');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: sans-serif;
@@ -242,7 +242,7 @@ h2 {
 @media only screen and (min-width: 768px){
     body {
         height: 100vh;
-        background-image: url('/images/jumble-hunt-bg.png');
+        background-image: url('/images/jumble-hunt-bg3.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
