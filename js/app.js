@@ -923,7 +923,7 @@ let chosenMsg;
 let scrambledWord;
 let msgType;
 let msgBckgrndImg;
-let level = 5
+let level = 1
 let correct = 1
 let attempts = 0
 let score = 0
@@ -1169,7 +1169,6 @@ function displayResults(){
         ${chosenMsg}
         <button id="nxtWrdBtn" onclick=${btnFunc}>${btnMsg}</button>
     </div>`
-    // winLoseDisplay.style.backgroundImage = "url(images/target.png)"
     winLoseDisplay.style.backgroundSize = "auto"
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
     winLoseDisplay.style.backgroundPosition = "center"

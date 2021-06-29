@@ -172,9 +172,13 @@ h2 {
 }
 
 #restartBtn{
-    text-align: left;
     font-family: 'Bebas Neue', cursive;
     background-color: Transparent;
+    text-shadow:
+    -1px -1px 0 red,
+    1px 1px 0 red,
+    -1px -1px 0 red,
+    1px 1px 0 red;
     border: none;
     background-image: url('/images/restart.png');
     background-size: cover;
@@ -188,6 +192,11 @@ h2 {
 #cheatBtn{
     font-family: 'Bebas Neue', cursive;
     background-color: Transparent;
+    text-shadow:
+    -1px -1px 0 red,
+    1px 1px 0 red,
+    -1px -1px 0 red,
+    1px 1px 0 red;
     border: none;
     background-image: url('/images/no-symbol.png');
     background-size: cover;
@@ -199,19 +208,25 @@ h2 {
 }
 
 #light-dark-button {
-    background-image: url('/images/explosion.png');
+    background-image: url('/images/night-vision-goggles.png');
     background-size: cover;
     position: fixed;
     bottom: 1rem;
-    right: 1.8rem;
+    left: 1.8rem;
     border: none;
     font-family: 'Bebas Neue', cursive;
     font-size: 1rem;
+    height: 55px;
 }
 
 #light-dark-button::after {
     border: none;
-    color: black;
+    color: red;
+    text-shadow:
+    -1px -1px 0 black,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px 1px 0 black;
     content: "STEALTH";
 }
 
