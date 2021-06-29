@@ -114,12 +114,17 @@ h2 {
 
 #winLoseMsg {
     font-family: 'Lobster', cursive;
-    font-size: 2rem;
+    font-size: 2.3rem;
     visibility: hidden;
     position: fixed;
     bottom: 20rem;
     min-height: 11rem;
-    
+    color: #69b0d8;
+    text-shadow:
+    -2px -2px 0 black,
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px 2px 0 black;
     padding-top: 3.5rem;
 
 
@@ -143,8 +148,9 @@ h2 {
     2px 2px 0 black,
     -2px -2px 0 black,
     2px 2px 0 black;
-    background: transparent;
+    background-color: rgba(91, 91, 91, 0.5);
     border: none;
+    border-radius: 50%;
 }
 
 #gameBoardDisplay {
@@ -245,6 +251,25 @@ h2 {
     content: "STEALTH";
 }
 
+#light-dark-button:hover,
+#cheatBtn:hover,
+#restartBtn:hover {
+    background-color: rgba(91, 91, 91, 0.7);
+    text-shadow:
+    -2px -2px 0 white,
+    2px 2px 0 white,
+    -2px -2px 0 white,
+    2px 2px 0 white;
+    color: #5B5B5B;
+    border-radius: 20%;
+}
+
+button:active {
+    background-color: rgba(91, 91, 91, 0.8);
+    box-shadow: 10px 10px rgba(60, 60, 60, 0.8);
+    transform: translateY(4px);
+    color: black;
+}
 
 @media only screen and (min-width: 768px){
     body {
