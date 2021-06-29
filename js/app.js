@@ -1147,6 +1147,7 @@ function displayResults(){
     winLoseDisplay.style.backgroundRepeat = "no-repeat"
     winLoseDisplay.style.backgroundPosition = "center"
     winLoseDisplay.style.visibility = "visible"
+    winLoseDisplay.className = "animate__animated animate__zoomInDown"
 }
 
 function restart(){
