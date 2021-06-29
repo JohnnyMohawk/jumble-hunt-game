@@ -6,6 +6,7 @@ const colorScheme = {
         console.log(colorScheme.dark)
         colorScheme.dark = colorScheme.dark ? "" : "dark"
         document.querySelector("body").setAttribute("class", colorScheme.dark)
+        document.getElementById("gameHeader").setAttribute("class", colorScheme.dark)
         console.log(colorScheme.dark)
     }
 }

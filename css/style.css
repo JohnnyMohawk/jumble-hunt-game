@@ -239,6 +239,14 @@ h2 {
         background-size: cover;
     }
 
+    body.dark {
+        background-image: url('/images/jumble-hunt-darkmode-bg.png');
+    }
+
+    #gameHeader.dark {
+        background-image: url('/images/jumble-hunt-moon-header.png');
+    }
+
     #gameHeader {
         width: 100%;
         height: 100%;
