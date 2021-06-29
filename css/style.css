@@ -45,17 +45,23 @@ h1 {
     margin: .2rem 0 -10px 0;
     font-family: 'Lobster', cursive;
     text-shadow:
-    -2px -2px 0 #5B5B5B,
-    2px 2px 0 #5B5B5B,
-    -2px -2px 0 #5B5B5B,
-    2px 2px 0 #5B5B5B;
+    -2px -2px 0 #571c32,
+    2px 2px 0 #571c32,
+    -2px -2px 0 #571c32,
+    2px 2px 0 #571c32;
     font-size: 4rem;
-    color: #5092be;
+    color: #8cb4cd;
     width: 100%;
 }
 
 #title.dark {
     font-family: 'Big Shoulders Stencil Display', cursive;
+    color: #112b48;
+    text-shadow:
+    -2px -2px 0 #70a4ac,
+    2px 2px 0 #70a4ac,
+    -2px -2px 0 #70a4ac,
+    2px 2px 0 #70a4ac;
 }
 
 #inGameText.dark {
@@ -151,12 +157,13 @@ h2 {
 }
 
 #board {
-    color: #7b9d3d;
+    color: #8cb4cd;
     text-shadow:
-    -2px -2px 0 black,
-    2px 2px 0 black,
-    -2px -2px 0 black,
-    2px 2px 0 black;
+    -2px -2px 0 #571c32,
+    2px 2px 0 #571c32,
+    -2px -2px 0 #571c32,
+    2px 2px 0 #571c32
+    ;
     font-size: 5rem;
     line-height: 7rem;
     display: flex;

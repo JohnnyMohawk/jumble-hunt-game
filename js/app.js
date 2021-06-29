@@ -1038,7 +1038,7 @@ function handleClick(event){
     let blah = document.getElementById(event.target.id)
     console.log(event.target.id)
     console.log(blah)
-    blah.setAttribute("class", "animate__animated animate__rotateIn")
+    blah.setAttribute("class", "animate__animated animate__zoomOutDown")
     lettersArr.splice(index, 1)
     crosshairBoom()
     checkGuess()
