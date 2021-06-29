@@ -1009,7 +1009,7 @@ function fillWordTiles(){
 function fillGuessTiles(){
     guessArr.forEach((letter, index) => {
         div2 = document.createElement('div')
-        div2.id="firstDiv" + index
+        div2.id="secDiv" + index
         div2.className="scramLets"
         div2.innerHTML=letter
         div2.setAttribute("style", "width:46px")
@@ -1023,17 +1023,27 @@ function fillGuessTiles(){
     })
 }
 
-function handleClick(){
+function handleClick(event){
     click += 1
-    board.innerHTML = ''
+    // let divIdx = click - 1
+    setTimeout(function(){
+        board.innerHTML = ''
+        // unscrambled.innerHTML = ''
+        fillWordTiles()
+    }, 600)
+    // board.innerHTML = ''
     unscrambled.innerHTML = ''
     index = parseInt(event.target.id.split('').pop())
     guessArr.push(lettersArr[index])
+    let blah = document.getElementById(event.target.id)
+    console.log(event.target.id)
+    console.log(blah)
+    blah.setAttribute("class", "animate__animated animate__rotateIn")
     lettersArr.splice(index, 1)
     crosshairBoom()
     checkGuess()
     fillGuessTiles()
-    fillWordTiles()
+    // fillWordTiles()
 }
 
 function checkGuess(){
