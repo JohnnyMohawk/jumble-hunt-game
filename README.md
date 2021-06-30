@@ -1,4 +1,4 @@
-# Jumble Hunt
+# Jumble Hunt: The Word Game Shooting Gallery
 
 <img src="/images/jh-mobile-ss.png" width=40% height=auto>
 
@@ -12,12 +12,12 @@ The game consists of 5 levels. Level 1 begins with four letter words. As the pla
 ## Scoring
 The player receives one point for every successfully unscrambled word. The player loses a point for every unsuccessful attempt. Everytime the player uses a cheat, their score will be set to zero.  
 
-## Play The Game!
+## Getting Started
 
 Jumble Hunt is deployed here: https://jumble-hunt.netlify.app/.
 Hope you enjoy!
 
-## Languages
+## Technologies Used
 
 * HTML
 * CSS
