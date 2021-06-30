@@ -914,10 +914,10 @@ const levelFiveWords = [
     "zippered"
 ]
 
-const gameOverMsgArr = ["Game Over"]
-const winGameMsgArr = ["You Win"]
-const correctMsgArr = ["That is correct"]
-const wrongMsgArr = ["Wrong"]
+const gameOverMsgArr = ["Game Over", "You Lose", "3 Strikes, Yer Out!", "Your're Done", "Nice Try. You Lose", "Maybe Next Time"]
+const winGameMsgArr = ["You Win!!!", "Victory!!!", "Winner!!!", "You're the Champ!", "You Won!!!", "You Beat the Game!", "#WINNING"]
+const correctMsgArr = ["That is Correct!", "Great Job!", "Wow! You're Good!", "Keep it Up!", "Impressive!", "WooHoo! Correct!", "BOOOOOOM!!!", "Great Shooting!", "AMAZEBALLS!", "OH YEAH!!!", "Genius!", "Fantastic", "Smarty Pants!", "WOWOWOWOW!!!", "You're on Fire!", "BOOMSHAKALAKA!", "Sharp Shooter!", "U R SMRT"]
+const wrongMsgArr = ["Wrong..", "Terrible..", "Disappointing..", "No.. just no.", "Are you serious?", "FAIL", "Come on....", "Trainwreck..", "Sheesh...", "You can do better.", "Really?!?", "Are you trying?", "Nope..", "That's not it..", "Sorry, wrong.", "No siree Bob", "No way..", "Absolutely not.", "Danglawang.."]
 let lettersArr = []
 let guessArr = [] 
 let rndmNumIdx;
@@ -949,6 +949,7 @@ const lightDarkBtn = document.querySelector("#light-dark-button")
 const winLoseDisplay = document.getElementById("winLoseMsg")
 const gunshot = new Audio("../audio/gunshot.wav")
 const boo = new Audio("../audio/boo.wav")
+const cheer = new Audio("../audio/cheer.wav")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
@@ -1129,6 +1130,8 @@ function displayResults(){
     if(level === 6){
         msgType = "win-game"
         msgBckgrndImg = "url('../images/neon-star.png')"
+        confetti.start(2500)
+        cheer.play()
     }
     setMessage()
     if(msgType === "game-over"){
