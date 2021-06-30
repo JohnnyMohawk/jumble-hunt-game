@@ -1026,13 +1026,10 @@ function fillGuessTiles(){
 
 function handleClick(event){
     click += 1
-    // let divIdx = click - 1
     setTimeout(function(){
         board.innerHTML = ''
-        // unscrambled.innerHTML = ''
         fillWordTiles()
     }, 600)
-    // board.innerHTML = ''
     unscrambled.innerHTML = ''
     index = parseInt(event.target.id.split('').pop())
     guessArr.push(lettersArr[index])
@@ -1044,7 +1041,6 @@ function handleClick(event){
     crosshairBoom()
     checkGuess()
     fillGuessTiles()
-    // fillWordTiles()
 }
 
 function checkGuess(){
@@ -1094,8 +1090,6 @@ function levelUp(){
         rndmWordGen(levelFourWords)
     }else if(level === 5){
         rndmWordGen(levelFiveWords)
-        // unscrambled.style.fontSize = "3rem";
-        // unscrambled.setAttribute("style", "width:40px")
     }else{
         msgType = "win-game"
     }
@@ -1126,6 +1120,7 @@ function displayResults(){
     if(attempts === 3){
         msgType = "game-over"
         msgBckgrndImg = "url('../images/target.png')"
+        boo.play()
     }
     if(level === 6){
         msgType = "win-game"
@@ -1137,19 +1132,15 @@ function displayResults(){
     if(msgType === "game-over"){
         btnFunc = "restart()"
         btnMsg = "New Game"
-
     }else if(msgType === "win-game"){
         btnFunc = "restart()"
         btnMsg = "New Game"
-
     }else if(msgType === "correct"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
-
     }else if(msgType === "wrong"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
-
     }
     winLoseDisplay.innerHTML =
     `<div id="msgAndBtn" style="background-image: ${msgBckgrndImg};">
@@ -1179,7 +1170,6 @@ function reset(){
 }
 
 function crosshairBoom(){
-    // toggles between crosshair cursor and displays flashbang cursor for 1/10th of a second on click while playing gunshot sound.
     gunshot.play()
     document.body.style.cursor="url('../images/explosion.png'), auto"
     setTimeout(function(){
