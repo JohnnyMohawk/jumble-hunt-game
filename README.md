@@ -32,6 +32,11 @@ Hope you enjoy!
 
 **John Nelson-Alden** 
 
+## Next Steps
+
+* Connect to dictionary API
+* Connect to database to set and monitor high score
+
 ## Graphics Sources
 
 * Light Mode Graphics: (https://dribbble.com/shots/15684771--anyon/attachments/7481855?mode=media), (https://www.shutterstock.com/image-illustration/steel-revolver-wooden-grip-view-back-1461942464), (https://www.pinclipart.com/maxpin/bibTb/)
