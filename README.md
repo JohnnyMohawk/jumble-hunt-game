@@ -10,7 +10,7 @@ Jumble Hunt is a shooting gallery style word jumble game. The letters of a word 
 The game consists of 5 levels. Level 1 begins with four letter words. As the player progresses through the levels, one letter is added to the length of the word, ending with eight letter words in Level 5. To advance to the next level, the player must correctly unscramble three words per level. During the game, the player gets three attempts to correctly unscramble a presented word. If the player has three unsuccessful attempts during the game, the player loses and the game is over. If the player successfully unscrambles three words per level with less than three failed attempts, the player wins the game and the game is over. The player has access to unlimited cheats and can easily beat the game that way (shame).
 
 ## Scoring
-The player receives one point for successfully unscrambled word. The player loses a point for every unsuccessful attempt. Everytime the player uses a cheat, their score will be set to zero.  
+The player receives one point for every successfully unscrambled word. The player loses a point for every unsuccessful attempt. Everytime the player uses a cheat, their score will be set to zero.  
 
 ## Play The Game!
 
