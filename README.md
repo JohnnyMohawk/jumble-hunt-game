@@ -31,9 +31,9 @@ Hope you enjoy!
 ## Graphics Sources
 
 * Light Mode Graphics: (https://dribbble.com/shots/15684771--anyon/attachments/7481855?mode=media), (https://www.shutterstock.com/image-illustration/steel-revolver-wooden-grip-view-back-1461942464), (https://www.pinclipart.com/maxpin/bibTb/)
-*Dark Mode Graphics:(https://wallpapercave.com/cartoon-landscape-wallpapers), (https://toppng.com/free-image/spas-12-mw2-fps-football-gun-shooter-3d-2018-PNG-free-PNG-Images_282175), (http://clipart-library.com/clipart/1669951.htm), (https://www.pinclipart.com/maxpin/bibTb/)
-*Button Graphics:(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/No_sign.svg/128px-No_sign.svg.png), (https://commons.wikimedia.org/wiki/File:Circular_arrow-red.svg), (https://favpng.com/png_view/goggles-night-vision-device-android-clip-art-png/w2XuNiHB), (https://www.freepnglogos.com/images/target-19552.html)
-Message Graphics:(https://www.cleanpng.com/png-portable-network-graphics-check-mark-wissenscheck-7146035/download-png.html), (https://www.pngkit.com/bigpic/u2q8a9q8t4o0q8e6/), (https://www.freepnglogos.com/images/target-19552.html)
+* Dark Mode Graphics:(https://wallpapercave.com/cartoon-landscape-wallpapers), (https://toppng.com/free-image/spas-12-mw2-fps-football-gun-shooter-3d-2018-PNG-free-PNG-Images_282175), (http://clipart-library.com/clipart/1669951.htm), (https://www.pinclipart.com/maxpin/bibTb/)
+* Button Graphics:(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/No_sign.svg/128px-No_sign.svg.png), (https://commons.wikimedia.org/wiki/File:Circular_arrow-red.svg), (https://favpng.com/png_view/goggles-night-vision-device-android-clip-art-png/w2XuNiHB), (https://www.freepnglogos.com/images/target-19552.html)
+* Message Graphics:(https://www.cleanpng.com/png-portable-network-graphics-check-mark-wissenscheck-7146035/download-png.html), (https://www.pngkit.com/bigpic/u2q8a9q8t4o0q8e6/), (https://www.freepnglogos.com/images/target-19552.html)
 Cursor Graphics:(https://toppng.com/roblox-shift-lock-cursor-PNG-free-PNG-Images_71142), (https://imgbin.com/png/DvR2wd7B/explosion-png)
 
 ## Authors
