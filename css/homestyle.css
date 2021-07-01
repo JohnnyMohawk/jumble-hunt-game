@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-    margin: 1.5rem 0 -18px 0;
+    margin: 1.5rem 0 -12px 0;
     font-family: 'Lobster', cursive;
     text-shadow:
     -2px -2px 0 #571c32,
@@ -44,12 +44,12 @@ h2 {
     1px 1px 0 black,
     -1px -1px 0 black,
     1px 1px 0 black;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #text {
     font-family: 'Viaoda Libre', cursive;
-    margin: 0%10px 20px;
+    margin: 0 10px 30px;
     color: black;
     background-color: rgba(204, 198, 198, 0.8);
     border: black solid ;
@@ -57,8 +57,7 @@ h2 {
 }
 
 #about {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 15px;
     line-height: 1.2rem;
     text-align: justify;
 }
@@ -77,7 +76,39 @@ h2 {
     font-size: 2rem;
     text-decoration: none;
     color: black;
-
     padding: 10px;
     margin: 5px;
+}
+
+#gameLink:hover,
+#gitLink:hover {
+    font-size: 3rem;
+}
+
+@media only screen and (min-width: 768px){
+    body {
+        height: 100vh;
+        background-image: url('/images/jumble-hunt-bg3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        margin: 5rem 0 2rem 0;
+    }
+
+    #text {
+        font-family: 'Viaoda Libre', cursive;
+        margin: 3rem 10rem;
+        padding: 0 20px;
+        color: black;
+        background-color: rgba(204, 198, 198, 0.8);
+        border: black solid ;
+        border-radius: 20px;
+    }
+
+    #gameLink:hover,
+    #gitLink:hover {
+        font-size: 3rem;
+    }
 }

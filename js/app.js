@@ -58,8 +58,8 @@ const winLoseDisplay = document.getElementById("winLoseMsg")
 const gunshot = new Audio("../audio/gunshot.wav")
 const boo = new Audio("../audio/boo.wav")
 const cheer = new Audio("../audio/cheer.wav")
-const correctAudio = new Audio("../audio/trumpet-correct.wav")
-const wrongAudio = new Audio("..audio/trombone-wrong.wav")
+const correctAudio = new Audio("../audio/correct.wav")
+const wrongAudio = new Audio("../audio/wrong.wav")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
@@ -248,11 +248,12 @@ function displayResults(){
     }else if(msgType === "correct"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
-        // correctAudio.play()
+        correctAudio.play()
     }else if(msgType === "wrong"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
-        // wrongAudio.play()
+        console.log(wrongAudio)
+        wrongAudio.play()
     }
     winLoseDisplay.innerHTML =
     `<div id="msgAndBtn" style="background-image: ${msgBckgrndImg};">
