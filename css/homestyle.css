@@ -18,10 +18,12 @@ body {
     background-position: center;
     background-size: cover;
     text-align:center;
+    margin: 0;
 }
 
 h1 {
-    margin: 1.5rem 0 -12px 0;
+    margin: 0;
+    padding: 1rem 0 0 0;
     font-family: 'Lobster', cursive;
     text-shadow:
     -2px -2px 0 #571c32,
@@ -91,10 +93,12 @@ h2 {
         background-image: url('/images/jumble-hunt-bg3.png');
         background-repeat: no-repeat;
         background-size: cover;
+        margin: 0;
     }
 
     h1 {
-        margin: 5rem 0 2rem 0;
+        margin: 0;
+        padding: 3rem 0 2rem 0;
     }
 
     #text {
