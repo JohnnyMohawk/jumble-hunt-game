@@ -1,4 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
+
 window.reset=reset
 window.restart=restart
 
@@ -29,7 +30,6 @@ const correctMsgArr = ["That is Correct!", "Great Job!", "Wow! You're Good!", "K
 const wrongMsgArr = ["Wrong..", "Terrible..", "Disappointing..", "No.. just no.", "Are you serious?", "FAIL", "Come on....", "Trainwreck..", "Sheesh...", "You can do better.", "Really?!?", "Are you trying?", "Nope..", "That's not it..", "Sorry, wrong.", "No siree Bob", "No way..", "Absolutely not.", "Danglawang.."]
 let lettersArr = []
 let guessArr = [] 
-let rndmNumIdx;
 let chosenWord;
 let chosenMsg;
 let scrambledWord;
@@ -42,8 +42,8 @@ let score = 0
 let cheats = 0
 let click = 0
 
-
 /*------------------------ Cached Element References ------------------------*/
+
 const board = document.getElementById('board')
 const unscrambled = document.getElementById('assemble')
 const word = document.getElementById('theWord')
@@ -61,10 +61,12 @@ const cheer = new Audio("../audio/cheer.wav")
 const correctAudio = new Audio("../audio/correct.wav")
 const wrongAudio = new Audio("../audio/wrong.wav")
 /*----------------------------- Event Listeners -----------------------------*/
+
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
 cheatBtn.addEventListener("click", revealAns)
 lightDarkBtn.addEventListener("click", colorScheme.change)
+
 /*-------------------------------- Functions --------------------------------*/
 
 checkUserColorSchemePreference()
