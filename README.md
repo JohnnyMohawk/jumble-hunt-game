@@ -55,3 +55,9 @@ Hope you enjoy!
 * Button Graphics:(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/No_sign.svg/128px-No_sign.svg.png), (https://commons.wikimedia.org/wiki/File:Circular_arrow-red.svg), (https://favpng.com/png_view/goggles-night-vision-device-android-clip-art-png/w2XuNiHB), (https://www.freepnglogos.com/images/target-19552.html)
 * Message Graphics:(https://www.cleanpng.com/png-portable-network-graphics-check-mark-wissenscheck-7146035/download-png.html), (https://www.pngkit.com/bigpic/u2q8a9q8t4o0q8e6/), (https://www.freepnglogos.com/images/target-19552.html)
 Cursor Graphics:(https://toppng.com/roblox-shift-lock-cursor-PNG-free-PNG-Images_71142), (https://imgbin.com/png/DvR2wd7B/explosion-png)
+
+## Statistics Sources
+
+* Literacy Stats: (https://www.forbes.com/sites/michaeltnietzel/2020/09/09/low-literacy-levels-among-us-adults-could-be-costing-the-economy-22-trillion-a-year/), (https://webcapp.ccsu.edu/?news=1767&data)
+* Gun Stats: (https://www.statista.com/topics/1287/firearms-in-the-us/#:~:text=Firearm%20ownership,owning%20one%20or%20more%20firearms.&text=The%20majority%20of%20surveyed%20men,these%20figures%20are%20slightly%20lower.)
+* Apps Stats: (https://www.businessofapps.com/data/app-statistics/#2.2)
