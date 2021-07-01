@@ -1,12 +1,16 @@
 # Jumble Hunt: The Word Game Shooting Gallery
 
-<img src="/images/jh-mobile-ss.png" width=40% height=auto>
+<p float="left">
+    <img src="/images/jh-mobile-ss.png" width="100" />
+    <img src="/images/jh-mobile-dark-ss.png"  width="100" /> 
+</p>
 
-<img src="/images/jh-mobile-dark-ss.png" width=40% height=auto>
+<p float="left">
+    <img src="/images/jh-desktop-ss.png" width="100" />
+    <img src="/images/jh-desktop-dark-ss.png"  width="100" /> 
+</p>
 
-<img src="/images/jh-desktop-ss.png" width=40% height=auto>
 
-<img src="/images/jh-desktop-dark-ss.png" width=40% height=auto>
 
 Jumble Hunt is a shooting gallery style word jumble game. The letters of a word will be rearranged in a random order and displayed on the screen. The player must “shoot” the letters in the correct order to unscramble the word.
 
