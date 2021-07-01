@@ -34,7 +34,7 @@ The player receives one point for every successfully unscrambled word. The playe
 
 ## Getting Started
 
-Jumble Hunt is deployed here: https://jumble-hunt.netlify.app/.
+Jumble Hunt is deployed here: [Jumble Hunt](https://jumble-hunt.netlify.app/).
 Hope you enjoy!
 
 ## Technologies Used
