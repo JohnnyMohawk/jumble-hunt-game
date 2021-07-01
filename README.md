@@ -45,8 +45,8 @@ Hope you enjoy!
 
 ## Built With
 
-* [Animate.css] (https://animate.style/) - Animations
-* [Bootstrap] (https://getbootstrap.com/) - Some button styling.
+* [Animate.css](https://animate.style/) - Animations
+* [Bootstrap](https://getbootstrap.com/) - Some button styling.
 
 ## Authors
 
