@@ -1,4 +1,6 @@
 # Jumble Hunt: The Word Game Shooting Gallery
+
+## Screenshots
 <p float="left">
     <img src="/images/jh-desktop-ss.png" width=45% />
     <img src="/images/jh-desktop-dark-ss.png"  width=45% /> 
