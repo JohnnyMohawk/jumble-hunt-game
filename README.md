@@ -4,6 +4,17 @@
 
 Jumble Hunt is a shooting gallery style word jumble game. The letters of a word will be rearranged in a random order and displayed on the screen. The player must “shoot” the letters in the correct order to unscramble the word.
 
+## Why Jumble Hunt?
+I love word games. They are a fun way to improve one’s vocabulary and spelling abilities. Jumble Hunt combines the educational benefits of a word jumble game with an intuitive, fun, user friendly graphical interface. Why make an educational shooting game? Here's why:
+
+* Americans are bad spellers. According to the U.S. Department of Education, in 2020, 54% of U.S. adults 16-74 years old (over 130 million people), lack proficiency in literacy, and read below a sixth-grade level.
+
+* Americans love guns. In 2020, 42 percent of U.S. households reported owning one or more firearms. While only 4% of the world’s population, Americans own approximately 40% of civilian-owned guns globally.
+
+* Americans love apps. Also in 2020, Americans downloaded a total of roughly 12.3 billion mobile apps! 
+
+Jumble Hunt attempts to pair America’s love of guns and mobile gaming to improve literacy! 
+
 ## Rules
 1 player
 
