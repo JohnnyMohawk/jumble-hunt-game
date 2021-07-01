@@ -13,7 +13,7 @@ html {
 
 body {
     height: 100vh;
-    background-image: url('/images/jumble-hunt-mobile-bg3.png');
+    background-image: url('/images/jumble-hunt-mobile-bg-final.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -292,6 +292,54 @@ button:active {
         width: 100%;
         height: 100%;
         background-image: url('/images/jumble-hunt-cloud-header.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: -18px;
+    }
+
+    #gameBoardDisplay {
+        position: fixed;
+        bottom: 14rem;
+    }
+
+    #winLoseMsg {
+        position: fixed;
+        bottom: 22rem;
+    }
+
+    #title.dark {
+        font-family: 'Big Shoulders Stencil Display', cursive;
+    }
+    
+    #inGameText.dark {
+        font-family: 'Big Shoulders Stencil Display', cursive;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    body {
+        height: 100vh;
+        background-image: url('/images/jumble-hunt-widescreen-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    body.dark {
+        background-image: url('/images/jumble-hunt-widescreen-darkmode-bg.png');
+    }
+
+    #gameHeader.dark {
+        background-image: url('/images/jumble-hunt-widescreen-moon-header.png');
+    }
+
+    #gameHeader {
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/jumble-hunt-widescreen-cloud-header.png');
         background-repeat: no-repeat;
         background-size: 100%;
     }

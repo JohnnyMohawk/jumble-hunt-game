@@ -53,12 +53,13 @@ const attemptsDisplay = document.getElementById("attempts")
 const cheatsDisplay = document.getElementById("cheats")
 const restartBtn = document.getElementById("restartBtn")
 const cheatBtn = document.getElementById("cheatBtn")
-const nextWordBtn = document.getElementById("nxtWrdBtn")
 const lightDarkBtn = document.querySelector("#light-dark-button")
 const winLoseDisplay = document.getElementById("winLoseMsg")
 const gunshot = new Audio("../audio/gunshot.wav")
 const boo = new Audio("../audio/boo.wav")
 const cheer = new Audio("../audio/cheer.wav")
+const correctAudio = new Audio("../audio/trumpet-correct.wav")
+const wrongAudio = new Audio("..audio/trombone-wrong.wav")
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", restart)
@@ -247,9 +248,11 @@ function displayResults(){
     }else if(msgType === "correct"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
+        // correctAudio.play()
     }else if(msgType === "wrong"){
         btnFunc = "reset()"
         btnMsg = "Continue to Next Word?"
+        // wrongAudio.play()
     }
     winLoseDisplay.innerHTML =
     `<div id="msgAndBtn" style="background-image: ${msgBckgrndImg};">
