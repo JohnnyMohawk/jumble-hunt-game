@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Stencil+Display:wght@700&family=Jomhuria&family=Kirang+Haerang&family=Lobster&family=Roboto+Slab&family=Viaoda+Libre&display=swap" rel="stylesheet">
-	<link 
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
-	rel="stylesheet" 
-	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
-	crossorigin="anonymous"
-    >
-	<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-	/>
-	<link rel="stylesheet" href="./css/style.css">
-	<script defer src="./js/confetti.js"></script>
-	<script src="./js/app.js" type="module"></script>
-	<title>Jumble-Hunt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/homestyle.css" />
+    <title>Jumble-Hunt-Home</title>
 </head>
 <body>
-	<div id="gameHeader">
-		<h1 id="title">Jumble Hunt</h1>
-		<h2 id="inGameText">The Word Game Shooting Gallery</h2>
-		<div id="gameStatusDisplay">
-			<p>Level: <span id="level">1</span></p>
-			<p>Score: <span id="score">0</span></p>
-			<p>Attempts: <span id="attempts">0</span></p>
-			<p>Cheats: <span id="cheats">0</span></p>
-		</div>
-	</div>
-	<div id="unscramDisplay">
-		<section id="assemble">
-		</section>
-	</div>
-	<div id="winLoseMsg">
-	</div>
-	<div id="gameBoardDisplay">
-		<section id="board">
-		</section>
-	</div>
-		<button id="cheatBtn" type="button">Cheat</button>
-		<button id="restartBtn" type="button">Restart</button>  
-		<button id="light-dark-button" class="btn"></button>
-	<section id="theWord"></section>
+    <div id="gameHeader">
+        <h1 id="title">Welcome to Jumble Hunt!</h1>
+        <h2 id="inGameText">The Word Game Shooting Gallery</h2>
+    </div>
+    <div id="text">
+        <p id="getStarted">Let's Get Started!</p> 
+        <p id="about">
+            Jumble Hunt is a shooting gallery style word jumble game. The letters of a word 
+            will be rearranged in a random order and displayed on the screen. The player must 
+            “shoot” the letters in the correct order to unscramble the word. <br><br>
+            There are 5 levels to Jumble Hunt. Level 1 begins with four letter words, as you 
+            progress through the levels, a letter will be added to the length of the word. 
+            By Level 5, the words will be eight letters long. <br><br> To advance to the next level, 
+            you must correctly unscramble three words per level. You get three attempts to 
+            correctly unscramble a presented word. If you have three unsuccessful attempts 
+            during the game, you lose and the game is over. If you successfully unscramble 
+            three words per level with less than three failed attempts, you win the game and 
+            the game is over. You do have access to unlimited cheats, however for each cheat 
+            your score will be reset to 0.
+        </p>
+    </div>
+        <a id="gameLink" href="game.html">Let's Play!</a>
+        <a id="gitLink" href="https://github.com/JohnnyMohawk/jumble-hunt-game">Code & ReadMe</a>
 </body>
 </html>
 
