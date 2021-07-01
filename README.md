@@ -47,6 +47,7 @@ Hope you enjoy!
 
 * Connect to dictionary API
 * Connect to database to set and monitor high score
+* Check for all possible words that can be assembled from the scrambled letters using all letters. If player unscrambles the letters to form a legitimate word, but it is not the intended word, it should still be counted as correct and player should advance. Example: PALM & LAMP.
 
 ## Graphics Sources
 
