@@ -1,13 +1,13 @@
 # Jumble Hunt: The Word Game Shooting Gallery
 
 <p float="left">
-    <img src="/images/jh-mobile-ss.png" width=40% />
-    <img src="/images/jh-mobile-dark-ss.png"  width=40% /> 
+    <img src="/images/jh-mobile-ss.png" width=45% />
+    <img src="/images/jh-mobile-dark-ss.png"  width=45% /> 
 </p>
 
 <p float="left">
-    <img src="/images/jh-desktop-ss.png" width=40% />
-    <img src="/images/jh-desktop-dark-ss.png"  width=40% /> 
+    <img src="/images/jh-desktop-ss.png" width=45% />
+    <img src="/images/jh-desktop-dark-ss.png"  width=45% /> 
 </p>
 
 
