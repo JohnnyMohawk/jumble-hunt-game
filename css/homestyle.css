@@ -50,7 +50,7 @@ h2 {
 }
 
 #text {
-    font-family: 'Viaoda Libre', cursive;
+    font-family: 'Bebas Neue', cursive;
     margin: 0 10px 30px;
     color: black;
     background-color: rgba(204, 198, 198, 0.8);
@@ -65,7 +65,7 @@ h2 {
 }
 
 #getStarted {
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -98,17 +98,22 @@ h2 {
 
     h1 {
         margin: 0;
-        padding: 3rem 0 2rem 0;
+        padding-top: 3rem;
     }
 
     #text {
-        font-family: 'Viaoda Libre', cursive;
+        font-family: 'Bebas Neue', cursive;
         margin: 3rem 10rem;
         padding: 0 20px;
         color: black;
         background-color: rgba(204, 198, 198, 0.8);
         border: black solid ;
         border-radius: 20px;
+    }
+
+    #about {
+        font-size: 1.5rem;
+        line-height: 1.1;
     }
 
     #gameLink:hover,
