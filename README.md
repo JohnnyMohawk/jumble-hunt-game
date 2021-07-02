@@ -66,6 +66,12 @@ Hope you enjoy!
 * Message Graphics:(https://www.cleanpng.com/png-portable-network-graphics-check-mark-wissenscheck-7146035/download-png.html), (https://www.pngkit.com/bigpic/u2q8a9q8t4o0q8e6/), (https://www.freepnglogos.com/images/target-19552.html)
 Cursor Graphics:(https://toppng.com/roblox-shift-lock-cursor-PNG-free-PNG-Images_71142), (https://imgbin.com/png/DvR2wd7B/explosion-png)
 
+## Audio Sources
+
+* Correct / Incorrect Sounds: (https://www.superluigibros.com/super-mario-rpg-sound-effects-wav)
+* Crowd Sounds: (http://www.talkingwav.com/wp-content/uploads/2017/10/cramer-26.wav), (https://www.findsounds.com/ISAPI/search.dll?keywords=cheer+cheering)
+* Gun Sounds: (https://www.soundjay.com/gun-sound-effect.html)
+
 ## Statistics Sources
 
 * Literacy Stats: (https://www.forbes.com/sites/michaeltnietzel/2020/09/09/low-literacy-levels-among-us-adults-could-be-costing-the-economy-22-trillion-a-year/), (https://webcapp.ccsu.edu/?news=1767&data)
